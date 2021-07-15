@@ -1,6 +1,6 @@
 //Google Fonts
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap');
 
 //Font variables
 $poppins: 'Poppins', sans-serif;
@@ -8,6 +8,12 @@ $josefin-sans: 'Josefin Sans', sans-serif;
 
 //Color variables
 $primary-color: #fffcf7;
+$primary-text-color: #08090d;
+$secondary-text-color: #6c4031;
+$tertiary-text-color: #717170;
+
+$primary-button-color: #f3bc59;
+$secondary-button-color: #fbcf7e;
 
 //Styles
 * {
@@ -19,19 +25,74 @@ $primary-color: #fffcf7;
 body {
 	font-family: $poppins;
 	background: $primary-color;
-	color: #08090d;
-	line-height: 1.5;
+	color: $primary-text-color;
+	padding: 2em 2.5em;
 }
 
 h1,
 h2,
 h3,
-h4,
-h5 {
+h4 {
 	font-family: $josefin-sans;
-	font-weight: 400;
+	font-weight: 700;
+	line-height: 1.25em;
+	margin: 2.5em 0 0;
 }
 
-ul {
-	list-style: none;
+header {
+	display: flex;
+	justify-content: space-between;
+
+	img {
+		width: 1.5em;
+	}
+
+	a {
+		text-decoration: none;
+		color: $secondary-text-color;
+		font-family: $josefin-sans;
+		font-weight: 700;
+	}
+
+	ul {
+		display: flex;
+		justify-content: space-between;
+		list-style: none;
+		li {
+			color: $tertiary-text-color;
+		}
+	}
+}
+
+.hero {
+	height: 60vh;
+
+	img {
+		position: absolute;
+		height: 20em;
+		margin-top: 2em;
+	}
+
+	h1 {
+		font-size: 1.5em;
+	}
+
+	p {
+		color: $tertiary-text-color;
+		font-size: 0.75em;
+		margin: 1.5em 0;
+	}
+
+	button {
+		color: $secondary-text-color;
+		background-color: $primary-button-color;
+		border-style: none;
+		border-radius: 1.5em;
+		font-weight: 600;
+		padding: 0.75em 1.25em;
+
+		&:hover {
+			background-color: $secondary-button-color;
+		}
+	}
 }

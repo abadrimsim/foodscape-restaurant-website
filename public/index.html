@@ -5,18 +5,26 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Foodscape</title>
+
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
 	</head>
 	<body>
 		<div class="nav-container">
 			<header>
-				<a href="index.html" class="logo">foodscape</a>
+				<span>
+					<img class="logo" src="./images/main-logo.svg" alt="Foodscape Logo" />
+					<a href="index.html" class="logo">foodscape</a>
+				</span>
 
 				<nav>
 					<ul>
 						<li>Home</li>
 						<li>About Us</li>
 						<li>Menu</li>
-						<li>Testimonials</li>
+						<li>Reviews</li>
 					</ul>
 				</nav>
 			</header>
@@ -26,45 +34,150 @@
 			<div class="content">
 				<h1>We’re always in the mood for food!</h1>
 				<p>
-					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio,
-					modi!
+					Foodscape is a casual dining restaurant with a fun, comfortable,
+					laid-back atmosphere and affordably priced menu.
 				</p>
 
 				<form>
 					<button formaction="index.html">Explore Food</button>
 				</form>
 			</div>
+
+			<div class="hero-img-container">
+				<img src="./images/hero-round-img.png" alt="Main Dish Hero Image" />
+				<img src="./images/hero-plate-img.png" alt="Main Dish Hero Image" />
+			</div>
 		</div>
 
 		<section class="featured">
-			<h2>Popular Dishes</h2>
+			<div class="featured-header">
+				<h2>Popular Dishes</h2>
+
+				<div class="header-btn">
+					<button class="btn"><i class="fa fa-arrow-left"></i></button>
+					<button class="btn"><i class="fa fa-arrow-right"></i></button>
+				</div>
+			</div>
+
+			<div class="featured-menu-container">
+				<div class="menu-card">
+					<img src="./images/main-3.png" alt="" />
+
+					<div class="menu-card-content">
+						<h3>Bolognese Pasta</h3>
+						<span class="star-rating">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+						</span>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque,
+							porro.
+						</p>
+						<h3>$25</h3>
+					</div>
+				</div>
+			</div>
 		</section>
 
 		<section class="about">
-			<h2>About Us</h2>
-			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis culpa
-				et aliquid dolore quisquam aut rerum nemo ut eos in.
-			</p>
+			<img src="./images/about-image.png" alt="" />
+
+			<div class="about-content">
+				<h2>About Us</h2>
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
+					ducimus nesciunt quos impedit ipsa fugit facilis assumenda dignissimos
+					fuga corrupti.
+				</p>
+			</div>
 		</section>
 
-		<section class="foodmenu">
-			<h2>Our Menu Pack</h2>
-			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis culpa
-				et aliquid dolore quisquam aut rerum nemo ut eos in.
-			</p>
+		<section class="regular-menu-container">
+			<h2>Our Regular Menu Pack</h2>
+
+			<div class="menu-categories">
+				<button class="btn">Main Dishes</button>
+				<button class="btn">Drinks</button>
+				<button class="btn">Dessert</button>
+			</div>
+
+			<div class="menu-card">
+				<img src="./images/main-5.png" alt="" />
+
+				<div class="menu-card-content">
+					<h3>Pancit Bihon</h3>
+					<span class="star-rating">
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+					</span>
+					<p>
+						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima.
+					</p>
+					<h3>$25</h3>
+				</div>
+			</div>
 		</section>
 
-		<section class="testimonial">
-			<h2>What Our Customer Says?</h2>
-			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis culpa
-				et aliquid dolore quisquam aut rerum nemo ut eos in.
-			</p>
+		<section class="reviews">
+			<div class="review-header">
+				<h2>What our Customer Says?</h2>
+
+				<div class="header-btn">
+					<button class="btn"><i class="fa fa-arrow-left"></i></button>
+					<button class="btn"><i class="fa fa-arrow-right"></i></button>
+				</div>
+			</div>
+
+			<div class="review-carousel">
+				<img src="./images/person-1.png" alt="" />
+
+				<div class="review-content">
+					<h2>The food is so great here!</h2>
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
+						culpa et aliquid dolore quisquam aut rerum nemo ut eos in.
+					</p>
+					<p>Jane Doe</p>
+				</div>
+			</div>
 		</section>
 
-		<footer></footer>
+		<div class="footer-container">
+			<footer>
+				<div class="contact-info">
+					<span>
+						<img
+							class="logo"
+							src="./images/main-logo.svg"
+							alt="Foodscape Logo"
+						/>
+						<a href="index.html" class="logo">foodscape</a>
+					</span>
+					<p>customerservice@foodscape.com</p>
+					<p>telephone number</p>
+					<!-- insert location via google maps -->
+				</div>
+
+				<div class="footer-menu">
+					<h2>Our Menu</h2>
+					<p>Main Dishes</p>
+					<p>Drinks</p>
+					<p>Dessert</p>
+				</div>
+
+				<div class="footer-info">
+					<h2>Information</h2>
+					<p>About Us</p>
+					<p>Reviews</p>
+				</div>
+
+				<p>All rights reserved. Foodscape 2021.</p>
+			</footer>
+		</div>
 
 		<script src="../src/app.js"></script>
 	</body>
