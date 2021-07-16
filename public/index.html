@@ -14,17 +14,22 @@
 	<body>
 		<div class="nav-container">
 			<header>
-				<span>
-					<img class="logo" src="./images/main-logo.svg" alt="Foodscape Logo" />
-					<a href="index.html" class="logo">foodscape</a>
-				</span>
+				<div class="site-logo">
+					<span>
+						<img
+							class="logo-img"
+							src="./images/main-logo.svg"
+							alt="Foodscape Logo"
+					/></span>
+					<a class="logo-title" href="index.html">foodscape</a>
+				</div>
 
 				<nav>
 					<ul>
-						<li>Home</li>
-						<li>About Us</li>
-						<li>Menu</li>
-						<li>Reviews</li>
+						<li><a href="#">Home</a></li>
+						<li><a href="#">About Us</a></li>
+						<li><a href="#">Menu</a></li>
+						<li><a href="#">Reviews</a></li>
 					</ul>
 				</nav>
 			</header>
@@ -43,105 +48,167 @@
 				</form>
 			</div>
 
-			<div class="hero-img-container">
-				<img src="./images/hero-round-img.png" alt="Main Dish Hero Image" />
-				<img src="./images/hero-plate-img.png" alt="Main Dish Hero Image" />
+			<div class="hero-image-container">
+				<div class="hero-image">
+					<img src="./images/hero-round-img.png" alt="Hero Section Dish" />
+					<img
+						src="./images/hero-plate-img.png"
+						alt="Hero Section Vector Image"
+					/>
+				</div>
 			</div>
 		</div>
 
 		<section class="featured">
-			<div class="featured-header">
+			<div class="featured-header transition2">
 				<h2>Popular Dishes</h2>
 
-				<div class="header-btn">
+				<span class="header-btn">
 					<button class="btn"><i class="fa fa-arrow-left"></i></button>
 					<button class="btn"><i class="fa fa-arrow-right"></i></button>
-				</div>
+				</span>
 			</div>
 
-			<div class="featured-menu-container">
-				<div class="menu-card">
-					<img src="./images/main-3.png" alt="" />
+			<div class="featured-container">
+				<div class="item-card transition2">
+					<div class="item-card-body">
+						<img src="./images/main-3.png" alt="Bolognese Pasta" />
 
-					<div class="menu-card-content">
-						<h3>Bolognese Pasta</h3>
-						<span class="star-rating">
+						<p class="menu-title">Bolognese Pasta</p>
+						<span class="menu-rating">
 							<i class="fa fa-star"></i>
 							<i class="fa fa-star"></i>
 							<i class="fa fa-star"></i>
 							<i class="fa fa-star"></i>
 						</span>
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque,
-							porro.
+
+						<p class="menu-desc">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit.
 						</p>
-						<h3>$25</h3>
+						<p class="menu-price">$25</p>
+					</div>
+				</div>
+
+				<div class="item-card transition2">
+					<div class="item-card-body">
+						<img src="./images/main-6.png" alt="Miso Soup" />
+
+						<p class="menu-title">Miso Soup</p>
+						<span class="menu-rating">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+						</span>
+
+						<p class="menu-desc">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit.
+						</p>
+						<p class="menu-price">$25</p>
 					</div>
 				</div>
 			</div>
 		</section>
 
 		<section class="about">
-			<img src="./images/about-image.png" alt="" />
+			<img
+				class="left transition3"
+				src="./images/about-image.png"
+				alt="Foodscape Featured Dish"
+			/>
 
-			<div class="about-content">
-				<h2>About Us</h2>
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
-					ducimus nesciunt quos impedit ipsa fugit facilis assumenda dignissimos
-					fuga corrupti.
-				</p>
+			<div class="right">
+				<div class="inner transition3">
+					<h2 class="about-title">About Us</h2>
+					<p class="about-desc">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
+						ducimus nesciunt quos impedit ipsa fugit facilis assumenda
+						dignissimos fuga corrupti.
+					</p>
+				</div>
 			</div>
 		</section>
 
 		<section class="regular-menu-container">
-			<h2>Our Regular Menu Pack</h2>
+			<div class="menu-header transition4">
+				<h2>Our Regular Menu Pack</h2>
 
-			<div class="menu-categories">
-				<button class="btn">Main Dishes</button>
-				<button class="btn">Drinks</button>
-				<button class="btn">Dessert</button>
+				<span class="menu-categories">
+					<button class="btn">Main Dishes</button>
+					<button class="btn">Drinks</button>
+					<button class="btn">Dessert</button>
+				</span>
 			</div>
 
-			<div class="menu-card">
-				<img src="./images/main-5.png" alt="" />
+			<div class="menu-container">
+				<ul>
+					<li class="transition4">
+						<div class="menu-img-container">
+							<img src="./images/main-1.png" alt="Bolognese Pasta" />
+						</div>
 
-				<div class="menu-card-content">
-					<h3>Pancit Bihon</h3>
-					<span class="star-rating">
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-					</span>
-					<p>
-						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima.
-					</p>
-					<h3>$25</h3>
-				</div>
+						<p class="menu-title">Bolognese Pasta</p>
+						<span class="menu-rating">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+						</span>
+
+						<p class="menu-desc">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque,
+							porro.
+						</p>
+						<p class="menu-price">$25</p>
+					</li>
+
+					<li class="transition4">
+						<div class="menu-img-container">
+							<img src="./images/main-2.png" alt="Miso Soup" />
+						</div>
+
+						<p class="menu-title">Miso Soup</p>
+						<span class="menu-rating">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+						</span>
+
+						<p class="menu-desc">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque,
+							porro.
+						</p>
+						<p class="menu-price">$25</p>
+					</li>
+				</ul>
 			</div>
 		</section>
 
 		<section class="reviews">
-			<div class="review-header">
+			<div class="reviews-header transition5">
 				<h2>What our Customer Says?</h2>
 
-				<div class="header-btn">
+				<span class="header-btn">
 					<button class="btn"><i class="fa fa-arrow-left"></i></button>
 					<button class="btn"><i class="fa fa-arrow-right"></i></button>
-				</div>
+				</span>
 			</div>
 
-			<div class="review-carousel">
-				<img src="./images/person-1.png" alt="" />
+			<div class="review-container transition5">
+				<img src="./images/person-1.png" alt="Personal Review" />
 
 				<div class="review-content">
-					<h2>The food is so great here!</h2>
-					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
-						culpa et aliquid dolore quisquam aut rerum nemo ut eos in.
-					</p>
-					<p>Jane Doe</p>
+					<div class="inner">
+						<p>The food is so great here!</p>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
+							culpa et aliquid dolore quisquam aut rerum nemo ut eos in.
+						</p>
+						<p>Jane Doe</p>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -163,14 +230,14 @@
 				</div>
 
 				<div class="footer-menu">
-					<h2>Our Menu</h2>
+					<p>Our Menu</p>
 					<p>Main Dishes</p>
 					<p>Drinks</p>
 					<p>Dessert</p>
 				</div>
 
 				<div class="footer-info">
-					<h2>Information</h2>
+					<p>Information</p>
 					<p>About Us</p>
 					<p>Reviews</p>
 				</div>
