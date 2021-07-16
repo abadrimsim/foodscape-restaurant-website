@@ -1,2 +1,2 @@
-# foodscape-restaurant-website
+# Foodscape Restaurant Website
  
