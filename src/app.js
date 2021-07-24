@@ -1,8 +1,21 @@
+'use strict';
+
 import './scss/app.scss';
+
 // import FoodMenu from './components/FoodMenu';
 
 // FoodMenu.map((food) => console.log(food));
 
+// Navbar
+let hamburger = document.querySelector('.hamburger-menu');
+let menu = document.querySelector('.navbar');
+
+hamburger.addEventListener('click', function () {
+	hamburger.classList.toggle('isactive');
+	menu.classList.toggle('active');
+});
+
+// Menu Cards
 const arrowButton = document.getElementsByClassName('arrow-btn');
 const itemCard = document.getElementsByClassName('item-card');
 const itemPage = Math.ceil(itemCard.length / 4);
