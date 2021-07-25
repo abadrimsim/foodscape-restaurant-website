@@ -1,15 +1,15 @@
 //Google Fonts
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
-// @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
 
 //Font variables
-$poppins: 'Poppins', sans-serif;
-// $josefin-sans: 'Josefin Sans', sans-serif;
 $open-sans: 'Open Sans', sans-serif;
+$ubuntu: 'Ubuntu', sans-serif;
 
 //Color variables
 $primary-color: #fffcf7;
+$secondary-color: #fff6e7;
 $primary-text-color: #08090d;
 $secondary-text-color: #502d1a;
 $tertiary-text-color: #5f5e5e;
@@ -25,7 +25,9 @@ $secondary-button-color: #f5c875;
 
 body {
 	height: 100vh;
-	font-family: $poppins;
+	font-family: $open-sans;
+	font-weight: 600;
+	line-height: 1.5em;
 	background: $primary-color;
 	color: $tertiary-text-color;
 	padding: 2em 1.5em;
@@ -48,37 +50,37 @@ img {
 h1,
 h2 {
 	color: $primary-text-color;
-	// font-family: $josefin-sans;
-	font-family: $open-sans;
+	font-family: $ubuntu;
 	font-weight: 700;
+	line-height: 1.25em;
 }
 
 p {
 	font-size: 0.9em;
 }
 
-button {
+button,
+select {
 	color: $secondary-text-color;
-	background-color: $primary-button-color;
-	border-style: none;
+	border-style: solid;
+	border-width: 0.1em;
+	border-color: $primary-button-color;
+	background-color: $primary-color;
 	border-radius: 2em;
 	font-weight: 800;
-	padding: 0.65em 1.75em;
+	padding: 0.7em 1.75em;
 	cursor: pointer;
 
 	&:hover {
-		background-color: $secondary-button-color;
-		box-shadow: 3px 3px 15px rgb(238, 225, 196);
+		background-color: $primary-button-color;
+		border-color: $primary-color;
+		box-shadow: 5px 10px 25px #b3b2b04f;
 	}
 }
 
 .nav-container {
 	img {
 		width: 2.5em;
-	}
-
-	a {
-		// color: $tertiary-text-color;
 	}
 
 	header {
@@ -95,14 +97,14 @@ button {
 
 			.logo-title {
 				color: $secondary-text-color;
-				font-family: $open-sans;
+				font-family: $ubuntu;
 				font-weight: 800;
 				margin-top: 0.5em;
 			}
 		}
 
 		.hamburger-menu {
-			padding-top: 0.35em;
+			padding-top: 0.55em;
 			transition: opacity 0.3s;
 
 			&:hover {
@@ -183,36 +185,39 @@ button {
 }
 
 .hero {
-	height: 65vh;
-	margin: 2em auto 3em;
-
-	h1 {
-		line-height: 1.25em;
-	}
+	height: 70vh;
+	margin: 3em auto;
+	display: flex;
+	position: relative;
+	// align-items: center;
+	flex-direction: column;
 
 	p {
 		margin: 1.75em 0 2.5em;
 	}
 
-	.hero-image-container {
+	.hero-image {
 		margin: 3em 0;
-		position: relative;
 
-		.hero-image {
-			img {
-				position: absolute;
-			}
+		img {
+			position: absolute;
+			// width: 90%;
+
+			// max-width: 30%;
 		}
 	}
 }
 
 .featured,
 .regular-menu {
-	margin: 2em auto;
 	.featured-header {
 		display: flex;
 		justify-content: space-between;
 		margin-bottom: 0.75em;
+
+		h2 {
+			padding-top: 0.15em;
+		}
 
 		button {
 			padding: 0.5em 0.8em;
@@ -226,14 +231,13 @@ button {
 		margin: auto;
 		display: flex;
 		align-items: center;
-		// overflow-x: auto;
 
 		&::-webkit-scrollbar {
 			display: none;
 		}
 
 		.item-card {
-			min-width: 15em;
+			min-width: 15.5em;
 			height: 90%;
 			background-color: #fff;
 			border-radius: 1.25em;
@@ -248,10 +252,9 @@ button {
 				position: absolute;
 				top: 50%;
 				transform: translateY(-50%);
-				padding: 1.25em;
 
 				img {
-					width: 85%;
+					width: 80%;
 				}
 
 				.menu-title,
@@ -284,7 +287,159 @@ button {
 	}
 
 	.left {
+		width: 75%;
+		margin: 2em auto;
+	}
+
+	.about-services {
+		display: flex;
+		justify-content: space-between;
+
+		span {
+			display: flex;
+
+			img {
+				width: auto;
+				height: 2.3em;
+			}
+
+			p {
+				margin: 0.5em 0.5em 1.25em;
+				color: $secondary-text-color;
+				font-weight: 700;
+			}
+		}
+	}
+}
+
+.regular-menu {
+	margin: 0 auto 3em;
+	.menu-header {
+		display: flex;
+		justify-content: space-between;
+
+		h2 {
+			padding-top: 0.2em;
+		}
+
+		.menu-categories {
+			padding: 0.7em 1.1em;
+		}
+	}
+}
+
+.reviews {
+	margin: 0 auto 3em;
+	.reviews-header {
+		display: flex;
+		justify-content: space-between;
+
+		h2 {
+			padding-top: 0.1em;
+		}
+
+		button {
+			padding: 0.5em 0.8em;
+		}
+	}
+
+	img {
 		width: 90%;
-		margin: 0 auto;
+	}
+}
+
+.our-chefs {
+	margin: 0 auto 3em;
+
+	.chef-header {
+		display: flex;
+		justify-content: space-between;
+
+		h2 {
+			padding-top: 0.1em;
+		}
+
+		button {
+			padding: 0.5em 0.8em;
+		}
+	}
+
+	.chef-container {
+		margin: 2em auto;
+
+		.chef-card {
+			background-color: #fff;
+			border-radius: 1.25em;
+			padding: 1em;
+			box-shadow: 5px 15px 30px rgb(238, 238, 227);
+			text-align: center;
+
+			img {
+				margin: 0.5em auto 1em;
+				border-radius: 1.25em;
+			}
+
+			p {
+				font-size: 1.25em;
+				color: $secondary-text-color;
+				font-weight: 700;
+			}
+		}
+	}
+}
+
+.cta {
+	background-color: $secondary-color;
+	padding: 1.5em 1.25em;
+	border-radius: 1.25em;
+	text-align: center;
+	margin: 0 auto 3em;
+
+	.left {
+		text-align: left;
+		h2 {
+			margin-bottom: 1.25em;
+		}
+
+		p {
+			margin-bottom: 1.5em;
+		}
+
+		button {
+			background-color: $secondary-color;
+			font-size: 0.65em;
+			font-weight: 400;
+			width: 40%;
+
+			&:hover {
+				background-color: $primary-button-color;
+			}
+		}
+	}
+
+	img {
+		margin: 2em auto 0;
+		width: 70%;
+	}
+}
+
+.footer-container {
+	span {
+		display: flex;
+		margin-bottom: 1em;
+
+		img {
+			width: 2.5em;
+		}
+		a {
+			color: $secondary-text-color;
+			font-family: $ubuntu;
+			font-weight: 800;
+			margin: 0.5em;
+		}
+	}
+
+	hr {
+		margin-bottom: 2em;
 	}
 }
