@@ -1,0 +1,68 @@
+const mainDish = [
+	{
+		foodImg: 'main-1.png',
+		foodName: 'Kebab Ala Mode',
+		foodRating: 5,
+		foodDesc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+		price: '$25',
+		isFeatured: true,
+	},
+	{
+		foodImg: '../../public/images/main-2.png',
+		foodName: 'Kebab Ala Mode',
+		foodRating: 5,
+		foodDesc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+		price: '$30',
+		isFeatured: true,
+	},
+	{
+		foodImg: '../../public/images/main-3.png',
+		foodName: 'Kebab Ala Mode',
+		foodRating: 5,
+		foodDesc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+		price: '$20',
+		isFeatured: false,
+	},
+	{
+		foodImg: '../../public/images/main-4.png',
+		foodName: 'Kebab Ala Mode',
+		foodRating: 5,
+		foodDesc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+		price: '$15',
+		isFeatured: true,
+	},
+	{
+		foodImg: '../../public/images/main-5.png',
+		foodName: 'Kebab Ala Mode',
+		foodRating: 5,
+		foodDesc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+		price: '$25',
+		isFeatured: false,
+	},
+	{
+		foodImg: '../../public/images/main-6.png',
+		foodName: 'Kebab Ala Mode',
+		foodRating: 5,
+		foodDesc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+		price: '$25',
+		isFeatured: false,
+	},
+	{
+		foodImg: '../../public/images/main-7.png',
+		foodName: 'Kebab Ala Mode',
+		foodRating: 5,
+		foodDesc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+		price: '$25',
+		isFeatured: false,
+	},
+	{
+		foodImg: '../../public/images/main-8.png',
+		foodName: 'Kebab Ala Mode',
+		foodRating: 5,
+		foodDesc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+		price: '$25',
+		isFeatured: false,
+	},
+];
+
+export default mainDish;

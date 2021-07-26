@@ -1,10 +1,9 @@
 'use strict';
 
 import './scss/app.scss';
+import MenuCard from './components/MenuCard';
 
-// import FoodMenu from './components/FoodMenu';
-
-// FoodMenu.map((food) => console.log(food));
+MenuCard();
 
 // Navbar
 let hamburger = document.querySelector('.hamburger-menu');

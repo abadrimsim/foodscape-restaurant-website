@@ -73,165 +73,7 @@
 				</span>
 			</div>
 
-			<div class="featured-container">
-				<div class="item-card transition2">
-					<div class="item-card-body">
-						<img src="./images/main-1.png" alt="Bolognese Pasta" />
-
-						<p class="menu-title">Bolognese Pasta</p>
-						<span class="menu-rating">
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-						</span>
-
-						<p class="menu-desc">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit.
-						</p>
-						<p class="menu-price">$25</p>
-					</div>
-				</div>
-
-				<div class="item-card transition2">
-					<div class="item-card-body">
-						<img src="./images/main-2.png" alt="Miso Soup" />
-
-						<p class="menu-title">Miso Soup</p>
-						<span class="menu-rating">
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-						</span>
-
-						<p class="menu-desc">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit.
-						</p>
-						<p class="menu-price">$25</p>
-					</div>
-				</div>
-
-				<div class="item-card transition2">
-					<div class="item-card-body">
-						<img src="./images/main-3.png" alt="Miso Soup" />
-
-						<p class="menu-title">Miso Soup</p>
-						<span class="menu-rating">
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-						</span>
-
-						<p class="menu-desc">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit.
-						</p>
-						<p class="menu-price">$25</p>
-					</div>
-				</div>
-
-				<div class="item-card transition2">
-					<div class="item-card-body">
-						<img src="./images/main-4.png" alt="Miso Soup" />
-
-						<p class="menu-title">Miso Soup</p>
-						<span class="menu-rating">
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-						</span>
-
-						<p class="menu-desc">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit.
-						</p>
-						<p class="menu-price">$25</p>
-					</div>
-				</div>
-
-				<div class="item-card transition2">
-					<div class="item-card-body">
-						<img src="./images/main-2.png" alt="Bolognese Pasta" />
-
-						<p class="menu-title">Bolognese Pasta</p>
-						<span class="menu-rating">
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-						</span>
-
-						<p class="menu-desc">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit.
-						</p>
-						<p class="menu-price">$25</p>
-					</div>
-				</div>
-
-				<div class="item-card transition2">
-					<div class="item-card-body">
-						<img src="./images/main-3.png" alt="Miso Soup" />
-
-						<p class="menu-title">Miso Soup</p>
-						<span class="menu-rating">
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-						</span>
-
-						<p class="menu-desc">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit.
-						</p>
-						<p class="menu-price">$25</p>
-					</div>
-				</div>
-
-				<div class="item-card transition2">
-					<div class="item-card-body">
-						<img src="./images/main-4.png" alt="Miso Soup" />
-
-						<p class="menu-title">Miso Soup</p>
-						<span class="menu-rating">
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-						</span>
-
-						<p class="menu-desc">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit.
-						</p>
-						<p class="menu-price">$25</p>
-					</div>
-				</div>
-
-				<div class="item-card transition2">
-					<div class="item-card-body">
-						<img src="./images/main-5.png" alt="Miso Soup" />
-
-						<p class="menu-title">Miso Soup</p>
-						<span class="menu-rating">
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-						</span>
-
-						<p class="menu-desc">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit.
-						</p>
-						<p class="menu-price">$25</p>
-					</div>
-				</div>
-			</div>
+			<div class="featured-container" id="featured-cards"></div>
 		</section>
 
 		<section class="about">
@@ -298,12 +140,6 @@
 		<section class="regular-menu">
 			<div class="menu-header transition4">
 				<h2>Our Menu</h2>
-
-				<!-- <span class="menu-categories">
-					<button class="btn">Main Dishes</button>
-					<button class="btn">Drinks</button>
-					<button class="btn">Dessert</button>
-				</span> -->
 
 				<select class="menu-categories">
 					<option class="btn">Main Dishes</option>
@@ -435,25 +271,28 @@
 						<a href="index.html" class="logo">foodscape</a>
 					</span>
 					<hr />
-					<p>customerservice@foodscape.com</p>
-					<p>telephone number</p>
-					<!-- insert location via google maps -->
 				</div>
 
-				<div class="footer-menu">
-					<p>Our Menu</p>
-					<p>Main Dishes</p>
-					<p>Drinks</p>
-					<p>Dessert</p>
+				<div class="footer-contact">
+					<ul>
+						<li>215 East Pender St., Vancouver, B.C.</li>
+						<li>info@foodscape.com</li>
+						<li>604-824-4421</li>
+					</ul>
 				</div>
 
-				<div class="footer-info">
-					<p>Information</p>
-					<p>About Us</p>
-					<p>Reviews</p>
+				<div class="footer-link">
+					<ul>
+						<li class="footer-title">Quick Links</li>
+						<li>Home</li>
+						<li>About Us</li>
+						<li>Menu</li>
+						<li>Reviews</li>
+						<li>Our Chefs</li>
+					</ul>
 				</div>
 
-				<p>All rights reserved. Foodscape 2021.</p>
+				<p>2021 © Foodscape. All Rights Reserved.</p>
 			</footer>
 		</div>
 
