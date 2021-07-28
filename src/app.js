@@ -1,23 +1,40 @@
 'use strict';
 
 import './scss/app.scss';
+import foodMenu from './foodMenu';
+import FeaturedCard from './components/FeaturedCard';
 import MenuCard from './components/MenuCard';
-
-MenuCard();
 
 // Navbar
 let hamburger = document.querySelector('.hamburger-menu');
 let menu = document.querySelector('.navbar');
 
-hamburger.addEventListener('click', function () {
-	hamburger.classList.toggle('isactive');
-	menu.classList.toggle('active');
-});
-
 // Menu Cards
 const arrowButton = document.getElementsByClassName('arrow-btn');
 const itemCard = document.getElementsByClassName('item-card');
 const itemPage = Math.ceil(itemCard.length / 4);
+
+const foodCategory = document.getElementById('menu-category');
+
+FeaturedCard(foodMenu);
+MenuCard(foodMenu, 'Main Dish');
+
+foodCategory.onchange = function (e) {
+	const category = e.target.value;
+
+	if (category === 'Main Dishes') {
+		MenuCard(foodMenu, 'Main Dish');
+	} else if (category === 'Drinks') {
+		MenuCard(foodMenu, 'Drink');
+	} else if (category === 'Dessert') {
+		MenuCard(foodMenu, 'Dessert');
+	}
+};
+
+hamburger.addEventListener('click', function () {
+	hamburger.classList.toggle('isactive');
+	menu.classList.toggle('active');
+});
 
 let l = 0;
 let move = 50;
