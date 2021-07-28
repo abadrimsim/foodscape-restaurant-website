@@ -138,4 +138,48 @@ const foodMenu = [
 	},
 ];
 
-export default foodMenu;
+const reviews = [
+	{
+		reviewImg: 'https://i.ibb.co/wwJct9M/person-1.png',
+		reviewTitle: 'Sarah Miller',
+		reviewBody: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+		reviewName: 'Jane Doe',
+	},
+	{
+		reviewImg: 'https://i.ibb.co/gDxjqtY/person-2.png',
+		reviewTitle: 'Sarah Miller',
+		reviewBody: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+		reviewName: 'Jane Doe',
+	},
+	{
+		reviewImg: 'https://i.ibb.co/x5VmWBg/person-3.png',
+		reviewTitle: 'Sarah Miller',
+		reviewBody: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+		reviewName: 'Jane Doe',
+	},
+];
+
+const chefs = [
+	{
+		chefImg: 'https://i.ibb.co/TtMvnr4/chef-1.png',
+		chefName: 'Sarah Miller',
+	},
+	{
+		chefImg: 'https://i.ibb.co/tPLLX22/chef-2.png',
+		chefName: 'Jackson Smith',
+	},
+	{
+		chefImg: 'https://i.ibb.co/pdzGz6m/chef-3.png',
+		chefName: 'Jenny Peterson',
+	},
+	{
+		chefImg: 'https://i.ibb.co/Y70ddRZ/chef-4.png',
+		chefName: 'Camilla Brown',
+	},
+	{
+		chefImg: 'https://i.ibb.co/s6FMwzW/chef-5.png',
+		chefName: 'Ramon Hernandez',
+	},
+];
+
+export { foodMenu, reviews, chefs };

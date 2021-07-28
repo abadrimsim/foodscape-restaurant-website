@@ -1,77 +1,138 @@
 'use strict';
 
 import './scss/app.scss';
-import foodMenu from './foodMenu';
+import { foodMenu, reviews, chefs } from './content';
+import ChefCard from './components/ChefCard';
 import FeaturedCard from './components/FeaturedCard';
 import MenuCard from './components/MenuCard';
+// import ReviewCard from './components/ReviewCard';
 
-// Navbar
-let hamburger = document.querySelector('.hamburger-menu');
-let menu = document.querySelector('.navbar');
+document.addEventListener('DOMContentLoaded', (e) => {
+	// Navbar
+	let hamburger = document.querySelector('.hamburger-menu');
+	let menu = document.querySelector('.navbar');
 
-// Menu Cards
-const arrowButton = document.getElementsByClassName('arrow-btn');
-const itemCard = document.getElementsByClassName('item-card');
-const itemPage = Math.ceil(itemCard.length / 4);
+	// Menu Cards
+	const fleftArrow = document.getElementById('fleft-arrow');
+	const frightArrow = document.getElementById('fright-arrow');
+	const rleftArrow = document.getElementById('rleft-arrow');
+	const rrightArrow = document.getElementById('rright-arrow');
 
-const foodCategory = document.getElementById('menu-category');
+	const featuredCard = document.getElementsByClassName('featured-card');
+	const menuCard = document.getElementsByClassName('menu-card');
 
-FeaturedCard(foodMenu);
-MenuCard(foodMenu, 'Main Dish');
+	const foodCategory = document.getElementById('menu-category');
 
-foodCategory.onchange = function (e) {
-	const category = e.target.value;
+	let featuredArr = [];
+	let featuredPage;
 
-	if (category === 'Main Dishes') {
-		MenuCard(foodMenu, 'Main Dish');
-	} else if (category === 'Drinks') {
-		MenuCard(foodMenu, 'Drink');
-	} else if (category === 'Dessert') {
-		MenuCard(foodMenu, 'Dessert');
-	}
-};
+	let menuArr = [];
+	let menuPage;
 
-hamburger.addEventListener('click', function () {
-	hamburger.classList.toggle('isactive');
-	menu.classList.toggle('active');
+	let l = 0;
+	let move = 25.34;
+	let maxMove = 203;
+
+	const mobileView = window.matchMedia('(max-width: 768px)');
+
+	FeaturedCard(foodMenu);
+	MenuCard(foodMenu, 'Main Dish');
+	ChefCard(chefs);
+	// ReviewCard(reviews);
+
+	// Hamburger Menu
+	hamburger.addEventListener('click', () => {
+		hamburger.classList.toggle('isactive');
+		menu.classList.toggle('active');
+	});
+
+	// Category Select
+	foodCategory.addEventListener('change', (e) => {
+		const category = e.target.value;
+
+		if (category === 'Main Dishes') {
+			MenuCard(foodMenu, 'Main Dish');
+		} else if (category === 'Drinks') {
+			MenuCard(foodMenu, 'Drink');
+		} else if (category === 'Dessert') {
+			MenuCard(foodMenu, 'Dessert');
+		}
+	});
+
+	// Arrow Buttons Functionality
+	setTimeout(() => {
+		featuredArr = [...featuredCard];
+		featuredPage = Math.ceil(featuredArr.length / 4);
+
+		menuArr = [...menuCard];
+		menuPage = Math.ceil(menuArr.length / 4);
+
+		if (mobileView.matches) {
+			move = 50.36;
+			maxMove = 504;
+		}
+
+		handleFBtns();
+		handleMBtns();
+	}, 500);
+
+	const handleFBtns = () => {
+		const moveRight = () => {
+			l = l + move;
+
+			if (featuredCard === 1) l = 0;
+			for (const i of featuredCard) {
+				if (l > maxMove) l = l - move;
+
+				i.style.left = '-' + l + '%';
+			}
+		};
+
+		const moveLeft = () => {
+			l = l - move;
+
+			if (l <= 0) l = 0;
+			for (const i of featuredCard) {
+				if (featuredPage > 1) i.style.left = '-' + l + '%';
+			}
+		};
+
+		frightArrow.onclick = () => {
+			moveRight();
+		};
+
+		fleftArrow.onclick = () => {
+			moveLeft();
+		};
+	};
+
+	const handleMBtns = () => {
+		const moveRight = () => {
+			l = l + move;
+
+			if (menuCard === 1) l = 0;
+			for (const i of menuCard) {
+				if (l > maxMove) l = l - move;
+
+				i.style.left = '-' + l + '%';
+			}
+		};
+
+		const moveLeft = () => {
+			l = l - move;
+
+			if (l <= 0) l = 0;
+			for (const i of menuCard) {
+				if (menuPage > 1) i.style.left = '-' + l + '%';
+			}
+		};
+
+		rrightArrow.onclick = () => {
+			moveRight();
+		};
+
+		rleftArrow.onclick = () => {
+			moveLeft();
+		};
+	};
 });
-
-let l = 0;
-let move = 50;
-let maxMove = 150;
-
-//Mobile view
-
-const mobileView = window.matchMedia('(max-width: 768px');
-
-if (mobileView.matches) {
-	move = 90;
-	maxMove = 750;
-}
-
-const moveRight = () => {
-	l = l + move;
-	if (itemCard == 1) l = 0;
-
-	for (let i of itemCard) {
-		if (l > maxMove) l = l - move;
-		i.style.left = '-' + l + '%';
-	}
-};
-
-const moveLeft = () => {
-	l = l - move;
-	if (l <= 0) l = 0;
-
-	for (let i of itemCard) {
-		if (itemPage > 1) i.style.left = '-' + l + '%';
-	}
-};
-
-arrowButton[1].onclick = () => {
-	moveRight();
-};
-
-arrowButton[0].onclick = () => {
-	moveLeft();
-};

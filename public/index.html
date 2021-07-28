@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Foodscape</title>
+		<title>Welcome to Foodscape</title>
 
 		<link
 			rel="stylesheet"
@@ -12,16 +12,14 @@
 		/>
 	</head>
 	<body>
+		<!-- Navigation Bar -->
 		<div class="nav-container">
 			<header>
 				<div class="site-logo">
 					<span>
-						<img
-							class="logo-img"
-							src="./images/main-logo.svg"
-							alt="Foodscape Logo"
+						<img src="./images/main-logo.svg" alt="Foodscape Logo"
 					/></span>
-					<a class="logo-title" href="index.html">foodscape</a>
+					<a href="index.html">foodscape</a>
 				</div>
 
 				<div class="hamburger-menu">
@@ -40,8 +38,9 @@
 			</nav>
 		</div>
 
+		<!-- Hero Section -->
 		<div class="hero">
-			<div class="content">
+			<div class="hero-content">
 				<h1>We’re Always in the Mood for Food!</h1>
 				<p>
 					Foodscape is a casual dining restaurant with a fun, comfortable,
@@ -63,69 +62,32 @@
 			</div>
 		</div>
 
+		<!-- Featured Menu Section -->
 		<section class="featured">
 			<div class="featured-header transition2">
 				<h2>Popular Dishes</h2>
 
-				<span class="header-btn">
-					<button class="arrow-btn"><i class="fa fa-arrow-left"></i></button>
-					<button class="arrow-btn"><i class="fa fa-arrow-right"></i></button>
+				<span>
+					<button class="arrow-btn" id="fleft-arrow">
+						<i class="fa fa-arrow-left"></i>
+					</button>
+					<button class="arrow-btn" id="fright-arrow">
+						<i class="fa fa-arrow-right"></i>
+					</button>
 				</span>
 			</div>
 
-			<div class="featured-container" id="featured-cards"></div>
+			<div class="featured-content" id="featured-cards"></div>
 		</section>
 
+		<!-- About Us Section -->
 		<section class="about">
-			<div class="left transition3">
+			<div class="about-image transition3">
 				<img src="./images/about-image.png" alt="Foodscape Featured Dish" />
 			</div>
 
-			<div class="about-services">
-				<ul class="left-icons">
-					<li>
-						<span>
-							<img src="./images/icon-1.png" alt="Online Order" />
-							<p>Online Order</p>
-						</span>
-					</li>
-					<li>
-						<span>
-							<img src="./images/icon-2.png" alt="24/7 Service" />
-							<p>24/7 Service</p>
-						</span>
-					</li>
-					<li>
-						<span>
-							<img src="./images/icon-3.png" alt="Clean Kitchen" />
-							<p>Clean Kitchen</p>
-						</span>
-					</li>
-				</ul>
-				<ul class="right-icons">
-					<li>
-						<span>
-							<img src="./images/icon-4.png" alt="Reservation" />
-							<p>Reservation</p>
-						</span>
-					</li>
-					<li>
-						<span>
-							<img src="./images/icon-5.png" alt="Super Chefs" />
-							<p>Super Chefs</p>
-						</span>
-					</li>
-					<li>
-						<span>
-							<img src="./images/icon-6.png" alt="Organized Place" />
-							<p>Organized Place</p>
-						</span>
-					</li>
-				</ul>
-			</div>
-
-			<div class="right">
-				<div class="inner transition3">
+			<div class="about-content">
+				<div class="about-desc transition3">
 					<h2 class="about-title">There’s No Other Place Like Foodscape</h2>
 					<p class="about-desc">
 						Foodscape serves a menu that is typically populated with a familiar
@@ -134,106 +96,127 @@
 						quality meals without any surprises.
 					</p>
 				</div>
+
+				<div class="about-services">
+					<ul class="left-icons">
+						<li>
+							<span>
+								<img src="./images/icon-1.png" alt="Online Order" />
+								<p>Online Order</p>
+							</span>
+						</li>
+						<li>
+							<span>
+								<img src="./images/icon-2.png" alt="24/7 Service" />
+								<p>24/7 Service</p>
+							</span>
+						</li>
+						<li>
+							<span>
+								<img src="./images/icon-3.png" alt="Clean Kitchen" />
+								<p>Clean Kitchen</p>
+							</span>
+						</li>
+					</ul>
+					<ul class="right-icons">
+						<li>
+							<span>
+								<img src="./images/icon-4.png" alt="Reservation" />
+								<p>Reservation</p>
+							</span>
+						</li>
+						<li>
+							<span>
+								<img src="./images/icon-5.png" alt="Super Chefs" />
+								<p>Super Chefs</p>
+							</span>
+						</li>
+						<li>
+							<span>
+								<img src="./images/icon-6.png" alt="Organized Place" />
+								<p>Organized Place</p>
+							</span>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</section>
 
+		<!-- Regular Menu Section -->
 		<section class="regular-menu">
 			<div class="menu-header transition4">
 				<h2>Our Menu</h2>
 
-				<select class="menu-categories" id="menu-category">
-					<option class="btn">Main Dishes</option>
-					<option class="btn">Drinks</option>
-					<option class="btn">Dessert</option>
-				</select>
+				<span>
+					<select class="menu-categories" id="menu-category">
+						<option>Main Dishes</option>
+						<option>Drinks</option>
+						<option>Dessert</option>
+					</select>
+					<button class="arrow-btn" id="rleft-arrow">
+						<i class="fa fa-arrow-left"></i>
+					</button>
+					<button class="arrow-btn" id="rright-arrow">
+						<i class="fa fa-arrow-right"></i>
+					</button>
+				</span>
 			</div>
 
-			<div class="menu-container" id="menu-cards">
-				<!-- <div class="item-card transition2">
-					<div class="item-card-body">
-						<img src="./images/dessert-1.png" alt="Blueberry Cheesecake" />
-
-						<p class="menu-title">Blueberry Cheesecake</p>
-						<span class="menu-rating">
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-						</span>
-
-						<p class="menu-desc">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit.
-						</p>
-						<p class="menu-price">$25</p>
-					</div>
-				</div>
-
-				<div class="item-card transition2">
-					<div class="item-card-body">
-						<img src="./images/dessert-2.png" alt="Blueberry Cheesecake" />
-
-						<p class="menu-title">Blueberry Cheesecake</p>
-						<span class="menu-rating">
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-						</span>
-
-						<p class="menu-desc">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit.
-						</p>
-						<p class="menu-price">$25</p>
-					</div>
-				</div> -->
-			</div>
+			<div class="menu-content" id="menu-cards"></div>
 		</section>
 
+		<!-- Reviews Section -->
 		<section class="reviews">
 			<div class="reviews-header transition5">
 				<h2>Some Testimonials!</h2>
 
-				<span class="header-btn">
-					<button class="btn"><i class="fa fa-arrow-left"></i></button>
-					<button class="btn"><i class="fa fa-arrow-right"></i></button>
+				<span>
+					<button class="arrow-btn" id="vleft-arrow">
+						<i class="fa fa-arrow-left"></i>
+					</button>
+					<button class="arrow-btn" id="vright-arrow">
+						<i class="fa fa-arrow-right"></i>
+					</button>
 				</span>
 			</div>
 
 			<div class="review-container transition5">
-				<img src="./images/person-1.png" alt="Personal Review" />
+				<div>
+					<img src="./images/person-1.png" alt="Personal Review" />
+				</div>
 
 				<div class="review-content">
 					<div class="inner">
-						<p>The food is so great here!</p>
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
-							culpa et aliquid dolore quisquam aut rerum nemo ut eos in.
+						<p class="review-title">The food is so great here!</p>
+						<p class="review-body">
+							"Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
+							culpa et aliquid dolore quisquam aut rerum nemo ut eos in."
 						</p>
-						<p>Jane Doe</p>
+						<p class="review-name">Jane Doe</p>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<section class="our-chefs">
+		<!-- Chefs Section -->
+		<section class="chefs">
 			<div class="chef-header transition5">
 				<h2>Meet Our Chefs</h2>
 
-				<span class="header-btn">
-					<button class="btn"><i class="fa fa-arrow-left"></i></button>
-					<button class="btn"><i class="fa fa-arrow-right"></i></button>
+				<span>
+					<button class="arrow-btn" id="cleft-arrow">
+						<i class="fa fa-arrow-left"></i>
+					</button>
+					<button class="arrow-btn" id="cright-arrow">
+						<i class="fa fa-arrow-right"></i>
+					</button>
 				</span>
 			</div>
 
-			<div class="chef-container">
-				<div class="chef-card transition2">
-					<img src="./images/chef-1.png" alt="Bolognese Pasta" />
-
-					<p class="menu-title">Sarah Peterson</p>
-				</div>
-			</div>
+			<div class="chef-content" id="chef-cards"></div>
 		</section>
 
+		<!-- CTA Section -->
 		<section class="cta">
 			<div class="left transition5">
 				<h2>
@@ -259,6 +242,7 @@
 			<img src="./images/mobile-view.png" alt="Download App" />
 		</section>
 
+		<!-- Footer Section -->
 		<div class="footer-container">
 			<footer>
 				<div class="contact-info">

@@ -15,7 +15,7 @@ $secondary-text-color: #502d1a;
 $tertiary-text-color: #5f5e5e;
 
 $primary-button-color: #f3bc58;
-$secondary-button-color: #f5c875;
+$secondary-button-color: #fff;
 
 //Styles
 * {
@@ -52,7 +52,7 @@ h2 {
 	color: $primary-text-color;
 	font-family: $ubuntu;
 	font-weight: 700;
-	line-height: 1.25em;
+	line-height: 1.5em;
 }
 
 p {
@@ -73,19 +73,19 @@ select {
 
 	&:hover {
 		background-color: $primary-button-color;
-		border-color: $primary-color;
+		border-color: $secondary-button-color;
 		box-shadow: 5px 10px 25px #b3b2b04f;
 	}
 }
 
 .nav-container {
-	img {
-		width: 2.5em;
-	}
-
 	header {
 		display: flex;
 		justify-content: space-between;
+
+		img {
+			width: 2.5em;
+		}
 
 		.site-logo {
 			display: flex;
@@ -95,7 +95,7 @@ select {
 				margin-right: 0.5em;
 			}
 
-			.logo-title {
+			a {
 				color: $secondary-text-color;
 				font-family: $ubuntu;
 				font-weight: 800;
@@ -137,11 +137,10 @@ select {
 	}
 
 	.navbar {
-		// background-color: $primary-button-color;
 		background-color: $primary-color;
 		width: 100%;
 		transition: all 2s ease-in;
-		// height: 100vh;
+
 		display: none;
 
 		&.active {
@@ -152,7 +151,6 @@ select {
 			// display: flex;
 			overflow: hidden;
 			list-style-type: none;
-			// padding-top: 50%;
 			margin: 0;
 
 			li {
@@ -161,9 +159,6 @@ select {
 				width: 100%;
 				text-align: center;
 				padding: 0.15rem;
-				// border-style: solid;
-				// border-width: 1.15px 2px;
-				// border-color: $primary-button-color;
 
 				&:hover {
 					cursor: pointer;
@@ -175,9 +170,6 @@ select {
 					color: $secondary-text-color;
 					font-weight: 700;
 					transition: all 0.5s;
-
-					// display: block;
-					// padding: 0 0.5em;
 				}
 			}
 		}
@@ -189,11 +181,12 @@ select {
 	margin: 3em auto;
 	display: flex;
 	position: relative;
-	// align-items: center;
 	flex-direction: column;
 
-	p {
-		margin: 1.75em 0 2.5em;
+	.hero-content {
+		p {
+			margin: 1.75em 0 2.5em;
+		}
 	}
 
 	.hero-image {
@@ -201,16 +194,14 @@ select {
 
 		img {
 			position: absolute;
-			// width: 90%;
-
-			// max-width: 30%;
 		}
 	}
 }
 
 .featured,
 .regular-menu {
-	.featured-header {
+	.featured-header,
+	.menu-header {
 		display: flex;
 		justify-content: space-between;
 		margin-bottom: 0.75em;
@@ -224,8 +215,8 @@ select {
 		}
 	}
 
-	.featured-container,
-	.menu-container {
+	.featured-content,
+	.menu-content {
 		width: 100%;
 		height: 410px;
 		margin: auto;
@@ -236,10 +227,11 @@ select {
 			display: none;
 		}
 
-		.item-card {
+		.featured-card,
+		.menu-card {
 			min-width: 15.5em;
 			height: 90%;
-			background-color: #fff;
+			background-color: $secondary-button-color;
 			border-radius: 1.25em;
 			margin: 0.65em;
 			box-shadow: 5px 15px 30px rgb(238, 238, 227);
@@ -248,7 +240,7 @@ select {
 			transition: 0.5s;
 			text-align: center;
 
-			.item-card-body {
+			.card-body {
 				position: absolute;
 				top: 50%;
 				transform: translateY(-50%);
@@ -257,19 +249,19 @@ select {
 					width: 80%;
 				}
 
-				.menu-title,
-				.menu-price {
+				.card-title,
+				.card-price {
 					color: $secondary-text-color;
 					font-weight: 700;
 					font-size: 1.15em;
 					margin: 0.25em 0;
 				}
 
-				.menu-rating {
+				.card-rating {
 					color: $primary-button-color;
 				}
 
-				.menu-desc {
+				.card-desc {
 					margin: 1em 0;
 				}
 			}
@@ -282,31 +274,33 @@ select {
 	display: flex;
 	flex-direction: column-reverse;
 
-	p {
-		margin: 2em 0;
-	}
-
-	.left {
+	.about-image {
 		width: 75%;
 		margin: 2em auto;
 	}
 
-	.about-services {
-		display: flex;
-		justify-content: space-between;
+	.about-content {
+		p {
+			margin: 2em 0;
+		}
 
-		span {
+		.about-services {
 			display: flex;
+			justify-content: space-between;
 
-			img {
-				width: auto;
-				height: 2.3em;
-			}
+			span {
+				display: flex;
 
-			p {
-				margin: 0.5em 0.5em 1.25em;
-				color: $secondary-text-color;
-				font-weight: 700;
+				img {
+					width: auto;
+					height: 2.3em;
+				}
+
+				p {
+					margin: 0.5em 0.5em 1.25em;
+					color: $secondary-text-color;
+					font-weight: 700;
+				}
 			}
 		}
 	}
@@ -329,7 +323,8 @@ select {
 }
 
 .reviews {
-	margin: 0 auto 3em;
+	margin: 3em auto;
+
 	.reviews-header {
 		display: flex;
 		justify-content: space-between;
@@ -343,12 +338,31 @@ select {
 		}
 	}
 
-	img {
-		width: 90%;
+	.review-container {
+		display: flex;
+		flex-direction: column;
+
+		img {
+			width: 90%;
+		}
+
+		.review-content {
+			.review-title {
+				color: $secondary-text-color;
+				font-weight: 700;
+				font-size: 1.15em;
+				margin: 1em 0;
+			}
+
+			.review-name {
+				color: $secondary-text-color;
+				margin: 1.25em 0;
+			}
+		}
 	}
 }
 
-.our-chefs {
+.chefs {
 	margin: 0 auto 3em;
 
 	.chef-header {
@@ -364,25 +378,45 @@ select {
 		}
 	}
 
-	.chef-container {
-		margin: 2em auto;
+	.chef-content {
+		width: 100%;
+		height: 410px;
+		margin: auto;
+		display: flex;
+		align-items: center;
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
 
 		.chef-card {
-			background-color: #fff;
+			min-width: 15.5em;
+			height: 90%;
+			background-color: $secondary-button-color;
 			border-radius: 1.25em;
-			padding: 1em;
+			margin: 0.65em;
 			box-shadow: 5px 15px 30px rgb(238, 238, 227);
+			position: relative;
+			left: 0;
+			transition: 0.5s;
 			text-align: center;
 
-			img {
-				margin: 0.5em auto 1em;
-				border-radius: 1.25em;
-			}
+			.card-body {
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
 
-			p {
-				font-size: 1.25em;
-				color: $secondary-text-color;
-				font-weight: 700;
+				img {
+					width: 85%;
+					border-radius: 0.75em;
+				}
+
+				.card-title {
+					color: $secondary-text-color;
+					font-weight: 700;
+					font-size: 1.15em;
+					margin: 0.25em 0;
+				}
 			}
 		}
 	}
@@ -459,5 +493,122 @@ select {
 		font-weight: 700;
 		font-size: 1.15em;
 		margin-top: 1em;
+	}
+}
+
+@media only screen and (min-width: 428px) {
+	.hero {
+		margin: 3em auto 7rem;
+		img {
+			max-width: 90%;
+		}
+	}
+}
+
+@media only screen and (min-width: 481px) {
+	.hero {
+		margin: 3em auto 10rem;
+	}
+}
+
+@media only screen and (min-width: 635px) {
+	body {
+		padding: 2em 3em;
+	}
+	.hero {
+		margin: 3em auto 12rem;
+		img {
+			max-width: 80%;
+		}
+	}
+}
+
+@media only screen and (min-width: 769px) {
+	body {
+		padding: 2em 5em;
+	}
+
+	.hero {
+		img {
+			max-width: 70%;
+		}
+	}
+
+	.reviews {
+		img {
+			max-width: 60%;
+		}
+	}
+}
+
+@media only screen and (min-width: 1025px) {
+	body {
+		padding: 3em 8em;
+	}
+
+	.hero {
+		height: 38vh;
+		flex-direction: row;
+
+		.hero-content {
+			width: 40vw;
+			h1 {
+				margin: 2em auto 1em;
+			}
+		}
+
+		.hero-image {
+			margin: -2em 0;
+
+			img {
+				width: 55%;
+			}
+		}
+	}
+
+	.about {
+		flex-direction: row;
+		margin: 3em auto;
+
+		.about-image {
+			width: 40vw;
+			margin: 0 4em;
+		}
+
+		.about-content {
+			width: 45vw;
+		}
+	}
+
+	.reviews {
+		.review-container {
+			flex-direction: row;
+			margin: 1em auto;
+
+			img {
+				max-width: 90%;
+			}
+			.review-content {
+				margin: auto;
+				width: 35vw;
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 1201px) {
+	body {
+		padding: 3em 15em;
+	}
+
+	.hero {
+		.hero-content {
+			width: 40vw;
+			padding: 0 3em 0 0;
+		}
+
+		img {
+			max-width: 40%;
+		}
 	}
 }
