@@ -12,7 +12,8 @@ body {
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
   line-height: 1.5em;
-  background: #fffcf7;
+  background-color: #fffcf7;
+  background-image: url("https://www.transparenttextures.com/patterns/brilliant.png");
   color: #4d4c4c;
   padding: 2em;
 }
@@ -835,7 +836,7 @@ select:hover {
 
 @media only screen and (min-width: 1453px) {
   body {
-    padding: 2em 16em;
+    padding: 2em 17em;
   }
   .nav-container .navbar {
     width: 23%;

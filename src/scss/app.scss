@@ -30,7 +30,8 @@ body {
 	font-family: $open-sans;
 	font-weight: 600;
 	line-height: 1.5em;
-	background: $primary-color;
+	background-color: $primary-color;
+	background-image: url('https://www.transparenttextures.com/patterns/brilliant.png');
 	color: $tertiary-text-color;
 	padding: 2em;
 }
@@ -785,7 +786,7 @@ select {
 
 @media only screen and (min-width: 1453px) {
 	body {
-		padding: 2em 16em;
+		padding: 2em 17em;
 	}
 
 	.nav-container {
