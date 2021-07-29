@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amaranth:wght@400;700&display=swap");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -12,8 +13,8 @@ body {
   font-weight: 600;
   line-height: 1.5em;
   background: #fffcf7;
-  color: #5f5e5e;
-  padding: 2em 1.5em;
+  color: #4d4c4c;
+  padding: 2em;
 }
 
 ul {
@@ -31,11 +32,20 @@ img {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   color: #08090d;
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Amaranth", sans-serif;
   font-weight: 700;
-  line-height: 1.5em;
+  line-height: 1.25em;
+}
+
+h1 {
+  font-size: 2.25em;
+}
+
+h2 {
+  font-size: 1.75em;
 }
 
 p {
@@ -89,7 +99,7 @@ select:hover {
 
 .nav-container header .site-logo a {
   color: #502d1a;
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Amaranth", sans-serif;
   font-weight: 800;
   margin-top: 0.5em;
 }
@@ -129,7 +139,6 @@ select:hover {
 }
 
 .nav-container .navbar {
-  background-color: #fffcf7;
   width: 100%;
   -webkit-transition: all 2s ease-in;
   transition: all 2s ease-in;
@@ -149,7 +158,6 @@ select:hover {
 .nav-container .navbar ul li {
   display: block;
   margin: 0;
-  width: 100%;
   text-align: center;
   padding: 0.15rem;
 }
@@ -157,6 +165,7 @@ select:hover {
 .nav-container .navbar ul li:hover {
   cursor: pointer;
   background-color: #f3bc58;
+  border-radius: 2em;
 }
 
 .nav-container .navbar ul li a {
@@ -169,7 +178,7 @@ select:hover {
 
 .hero {
   height: 70vh;
-  margin: 3em auto;
+  margin: 3em auto 8em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -232,6 +241,7 @@ select:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  overflow-x: hidden;
 }
 
 .featured .featured-content::-webkit-scrollbar,
@@ -250,7 +260,7 @@ select:hover {
 .regular-menu .menu-content .featured-card,
 .regular-menu .menu-content .menu-card {
   min-width: 15.5em;
-  height: 90%;
+  height: 80%;
   background-color: #fff;
   border-radius: 1.25em;
   margin: 0.65em;
@@ -285,7 +295,7 @@ select:hover {
 .regular-menu .featured-content .menu-card .card-body img,
 .regular-menu .menu-content .featured-card .card-body img,
 .regular-menu .menu-content .menu-card .card-body img {
-  width: 80%;
+  width: 75%;
 }
 
 .featured .featured-content .featured-card .card-body .card-title,
@@ -356,9 +366,13 @@ select:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.about .about-content .about-services .left-icons {
+  margin-right: 6em;
 }
 
 .about .about-content .about-services span {
@@ -477,6 +491,7 @@ select:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  overflow-x: hidden;
 }
 
 .chefs .chef-content::-webkit-scrollbar {
@@ -485,7 +500,7 @@ select:hover {
 
 .chefs .chef-content .chef-card {
   min-width: 15.5em;
-  height: 90%;
+  height: 80%;
   background-color: #fff;
   border-radius: 1.25em;
   margin: 0.65em;
@@ -503,10 +518,11 @@ select:hover {
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+  padding-top: 1em;
 }
 
 .chefs .chef-content .chef-card .card-body img {
-  width: 85%;
+  width: 80%;
   border-radius: 0.75em;
 }
 
@@ -550,7 +566,7 @@ select:hover {
 
 .cta img {
   margin: 2em auto 0;
-  width: 70%;
+  width: 65%;
 }
 
 .footer-container span {
@@ -566,7 +582,7 @@ select:hover {
 
 .footer-container span a {
   color: #502d1a;
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Amaranth", sans-serif;
   font-weight: 800;
   margin: 0.5em;
 }
@@ -575,67 +591,139 @@ select:hover {
   margin-bottom: 2em;
 }
 
-.footer-container li {
+.footer-container .footer-link {
+  margin-bottom: 2em;
+}
+
+.footer-container .footer-link li {
   line-height: 2.5em;
 }
 
-.footer-container p {
+.footer-container .footer-link p {
   padding: 2em 0;
 }
 
-.footer-container .footer-title {
+.footer-container .footer-link .footer-title {
   color: #08090d;
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Amaranth", sans-serif;
   font-weight: 700;
   font-size: 1.15em;
   margin-top: 1em;
 }
 
-@media only screen and (min-width: 428px) {
+@media only screen and (min-width: 480px) {
   .hero {
-    margin: 3em auto 7rem;
+    margin: 3em auto 10rem;
   }
   .hero img {
     max-width: 90%;
   }
 }
 
-@media only screen and (min-width: 481px) {
-  .hero {
-    margin: 3em auto 10rem;
-  }
-}
-
-@media only screen and (min-width: 635px) {
+@media only screen and (min-width: 600px) {
   body {
     padding: 2em 3em;
   }
   .hero {
-    margin: 3em auto 12rem;
+    margin: 3em auto 10rem;
   }
   .hero img {
     max-width: 80%;
+    left: 4em;
+  }
+  .about .about-image {
+    width: 60%;
+  }
+  .reviews .review-image {
+    max-width: 65%;
+    margin: 0 auto;
+  }
+  .reviews .review-image img {
+    width: 100%;
+  }
+  .cta {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 2em 4em;
+    margin-bottom: 10em;
+  }
+  .cta .left {
+    width: 60%;
+  }
+  .cta img {
+    width: 30%;
+    right: 5em;
+    position: absolute;
   }
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 768px) {
   body {
-    padding: 2em 5em;
+    padding: 2em 4em;
+  }
+  .nav-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .nav-container .hamburger-menu {
+    display: none;
+  }
+  .nav-container .navbar {
+    width: 50%;
+    display: block;
+  }
+  .nav-container .navbar ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+    list-style-type: none;
+    padding-top: 0.25em;
+  }
+  .nav-container .navbar ul li {
+    margin: 0 0.5em;
+    text-align: center;
+    border-style: solid;
+    border-width: 0.1em;
+    border-radius: 2em;
+    border-color: #fffcf7;
+  }
+  .nav-container .navbar ul li:hover {
+    cursor: pointer;
+    background-color: #f3bc58;
+    border-color: #fff;
   }
   .hero img {
     max-width: 70%;
+    left: 5em;
   }
-  .reviews img {
-    max-width: 60%;
+  .footer-container .contact-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .footer-container .contact-info .footer-contact {
+    margin: 2em 10em 0 0;
   }
 }
 
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-width: 1024px) {
   body {
-    padding: 3em 8em;
+    padding: 2em 6em;
+  }
+  .nav-container .navbar {
+    width: 40%;
   }
   .hero {
-    height: 38vh;
+    height: 35vh;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -647,25 +735,28 @@ select:hover {
   .hero .hero-content h1 {
     margin: 2em auto 1em;
   }
-  .hero .hero-image {
-    margin: -2em 0;
-  }
   .hero .hero-image img {
-    width: 55%;
+    width: 50%;
+    top: -1em;
+    left: 25em;
   }
   .about {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    margin: 3em auto;
+    margin-bottom: 1em auto 3em;
   }
   .about .about-image {
     width: 40vw;
-    margin: 0 4em;
+    margin-right: 3em;
   }
   .about .about-content {
     width: 45vw;
+    margin-top: 2em;
+  }
+  .about .about-content .about-services .left-icons {
+    margin-right: 0;
   }
   .reviews .review-container {
     -webkit-box-orient: horizontal;
@@ -674,25 +765,115 @@ select:hover {
             flex-direction: row;
     margin: 1em auto;
   }
-  .reviews .review-container img {
-    max-width: 90%;
+  .reviews .review-container .review-image {
+    width: 40vw;
+  }
+  .reviews .review-container .review-image img {
+    max-width: 100%;
   }
   .reviews .review-container .review-content {
-    margin: auto;
-    width: 35vw;
+    margin: auto 0 auto 2em;
+    width: 45vw;
+  }
+  .cta {
+    padding: 4em;
+  }
+  .cta .left {
+    width: 60%;
+  }
+  .cta img {
+    width: 20%;
+    right: 10em;
   }
 }
 
-@media only screen and (min-width: 1201px) {
+@media only screen and (min-width: 1280px) {
   body {
-    padding: 3em 15em;
+    padding: 2em 10em;
+  }
+  .nav-container .navbar {
+    width: 35%;
+  }
+  .hero {
+    height: 40vh;
   }
   .hero .hero-content {
-    width: 40vw;
-    padding: 0 3em 0 0;
+    width: 35vw;
   }
-  .hero img {
-    max-width: 40%;
+  .hero .hero-image img {
+    width: 48%;
+    left: 30em;
+  }
+  .about .about-image {
+    width: 39vw;
+    margin-right: 3em;
+  }
+  .about .about-content .about-services .left-icons {
+    margin-right: 5em;
+  }
+  .cta {
+    padding: 4em 6em;
+    margin-bottom: 15em;
+  }
+  .cta img {
+    width: 20%;
+    right: 18em;
+  }
+}
+
+@media only screen and (min-width: 1366px) {
+  body {
+    padding: 2em 12em;
+  }
+  .nav-container .navbar {
+    width: 35%;
+  }
+  .hero {
+    height: 45vh;
+  }
+}
+
+@media only screen and (min-width: 1453px) {
+  body {
+    padding: 2em 16em;
+  }
+  .nav-container .navbar {
+    width: 23%;
+  }
+  .hero {
+    height: 45vh;
+  }
+  .hero .hero-content {
+    width: 35vw;
+  }
+  .hero .hero-image img {
+    width: 40%;
+    left: 45em;
+  }
+  .featured span,
+  .chefs span {
+    display: none;
+  }
+  .about .about-image {
+    width: 20vw;
+    margin-right: 3em;
+  }
+  .about .about-content .about-services .left-icons {
+    margin-right: 10em;
+  }
+  .reviews .review-container .review-image {
+    width: 20vw;
+  }
+  .reviews .review-container .review-content {
+    width: 40vw;
+  }
+  .cta {
+    padding: 7em 6em;
+    margin-bottom: 17em;
+  }
+  .cta img {
+    width: 13%;
+    right: 27em;
   }
 }
 /*# sourceMappingURL=app.css.map */

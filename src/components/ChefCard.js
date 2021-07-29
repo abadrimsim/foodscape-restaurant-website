@@ -6,7 +6,7 @@ const ChefCard = (chef) => {
 					<div class='card-body'>
 						<img src=${chef[i].chefImg} alt='${chef[i].chefName}' />
 
-						<p class='card-title'>${chef[i].chefName}</p>
+						<h3 class='card-title'>${chef[i].chefName}</h3>
 					</div>
 				</div>`;
 

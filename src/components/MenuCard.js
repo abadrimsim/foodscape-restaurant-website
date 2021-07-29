@@ -10,7 +10,7 @@ const MenuCard = (menu, category) => {
 			<div class="card-body">
 				<img src=${menu[i].foodImg} alt="${menu[i].foodName}" />
 
-				<p class="card-title">${menu[i].foodName}</p>
+				<h3 class="card-title">${menu[i].foodName}</h3>
 
 				<span class="card-rating">
                     <i class='fa fa-star'></i>

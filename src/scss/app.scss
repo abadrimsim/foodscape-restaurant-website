@@ -2,17 +2,19 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amaranth:wght@400;700&display=swap');
 
 //Font variables
 $open-sans: 'Open Sans', sans-serif;
 $ubuntu: 'Ubuntu', sans-serif;
+$amaranth: 'Amaranth', sans-serif;
 
 //Color variables
 $primary-color: #fffcf7;
 $secondary-color: #fff6e7;
 $primary-text-color: #08090d;
 $secondary-text-color: #502d1a;
-$tertiary-text-color: #5f5e5e;
+$tertiary-text-color: #4d4c4c;
 
 $primary-button-color: #f3bc58;
 $secondary-button-color: #fff;
@@ -30,7 +32,7 @@ body {
 	line-height: 1.5em;
 	background: $primary-color;
 	color: $tertiary-text-color;
-	padding: 2em 1.5em;
+	padding: 2em;
 }
 
 ul {
@@ -48,11 +50,20 @@ img {
 }
 
 h1,
-h2 {
+h2,
+h3 {
 	color: $primary-text-color;
-	font-family: $ubuntu;
+	font-family: $amaranth;
 	font-weight: 700;
-	line-height: 1.5em;
+	line-height: 1.25em;
+}
+
+h1 {
+	font-size: 2.25em;
+}
+
+h2 {
+	font-size: 1.75em;
 }
 
 p {
@@ -97,7 +108,7 @@ select {
 
 			a {
 				color: $secondary-text-color;
-				font-family: $ubuntu;
+				font-family: $amaranth;
 				font-weight: 800;
 				margin-top: 0.5em;
 			}
@@ -137,7 +148,6 @@ select {
 	}
 
 	.navbar {
-		background-color: $primary-color;
 		width: 100%;
 		transition: all 2s ease-in;
 
@@ -156,13 +166,13 @@ select {
 			li {
 				display: block;
 				margin: 0;
-				width: 100%;
 				text-align: center;
 				padding: 0.15rem;
 
 				&:hover {
 					cursor: pointer;
 					background-color: $primary-button-color;
+					border-radius: 2em;
 				}
 
 				a {
@@ -178,7 +188,7 @@ select {
 
 .hero {
 	height: 70vh;
-	margin: 3em auto;
+	margin: 3em auto 8em;
 	display: flex;
 	position: relative;
 	flex-direction: column;
@@ -222,6 +232,7 @@ select {
 		margin: auto;
 		display: flex;
 		align-items: center;
+		overflow-x: hidden;
 
 		&::-webkit-scrollbar {
 			display: none;
@@ -230,7 +241,7 @@ select {
 		.featured-card,
 		.menu-card {
 			min-width: 15.5em;
-			height: 90%;
+			height: 80%;
 			background-color: $secondary-button-color;
 			border-radius: 1.25em;
 			margin: 0.65em;
@@ -246,7 +257,7 @@ select {
 				transform: translateY(-50%);
 
 				img {
-					width: 80%;
+					width: 75%;
 				}
 
 				.card-title,
@@ -286,7 +297,11 @@ select {
 
 		.about-services {
 			display: flex;
-			justify-content: space-between;
+			justify-content: flex-start;
+
+			.left-icons {
+				margin-right: 6em;
+			}
 
 			span {
 				display: flex;
@@ -384,6 +399,7 @@ select {
 		margin: auto;
 		display: flex;
 		align-items: center;
+		overflow-x: hidden;
 
 		&::-webkit-scrollbar {
 			display: none;
@@ -391,7 +407,7 @@ select {
 
 		.chef-card {
 			min-width: 15.5em;
-			height: 90%;
+			height: 80%;
 			background-color: $secondary-button-color;
 			border-radius: 1.25em;
 			margin: 0.65em;
@@ -405,9 +421,10 @@ select {
 				position: absolute;
 				top: 50%;
 				transform: translateY(-50%);
+				padding-top: 1em;
 
 				img {
-					width: 85%;
+					width: 80%;
 					border-radius: 0.75em;
 				}
 
@@ -453,7 +470,7 @@ select {
 
 	img {
 		margin: 2em auto 0;
-		width: 70%;
+		width: 65%;
 	}
 }
 
@@ -467,7 +484,7 @@ select {
 		}
 		a {
 			color: $secondary-text-color;
-			font-family: $ubuntu;
+			font-family: $amaranth;
 			font-weight: 800;
 			margin: 0.5em;
 		}
@@ -476,78 +493,157 @@ select {
 	hr {
 		margin-bottom: 2em;
 	}
+
+	.footer-link {
+		margin-bottom: 2em;
+		li {
+			line-height: 2.5em;
+		}
+
+		p {
+			padding: 2em 0;
+		}
+
+		.footer-title {
+			color: $primary-text-color;
+			font-family: $amaranth;
+			font-weight: 700;
+			font-size: 1.15em;
+			margin-top: 1em;
+		}
+	}
 }
 
-.footer-container {
-	li {
-		line-height: 2.5em;
-	}
+// Media Queries
 
-	p {
-		padding: 2em 0;
-	}
-
-	.footer-title {
-		color: $primary-text-color;
-		font-family: $ubuntu;
-		font-weight: 700;
-		font-size: 1.15em;
-		margin-top: 1em;
-	}
-}
-
-@media only screen and (min-width: 428px) {
+@media only screen and (min-width: 480px) {
 	.hero {
-		margin: 3em auto 7rem;
+		margin: 3em auto 10rem;
 		img {
 			max-width: 90%;
 		}
 	}
 }
 
-@media only screen and (min-width: 481px) {
-	.hero {
-		margin: 3em auto 10rem;
-	}
-}
-
-@media only screen and (min-width: 635px) {
+@media only screen and (min-width: 600px) {
 	body {
 		padding: 2em 3em;
 	}
+
 	.hero {
-		margin: 3em auto 12rem;
+		margin: 3em auto 10rem;
 		img {
 			max-width: 80%;
+			left: 4em;
+		}
+	}
+
+	.about {
+		.about-image {
+			width: 60%;
+		}
+	}
+
+	.reviews {
+		.review-image {
+			max-width: 65%;
+			margin: 0 auto;
+			img {
+				width: 100%;
+			}
+		}
+	}
+
+	.cta {
+		display: flex;
+		padding: 2em 4em;
+		margin-bottom: 10em;
+
+		.left {
+			width: 60%;
+		}
+
+		img {
+			width: 30%;
+			right: 5em;
+			position: absolute;
 		}
 	}
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 768px) {
 	body {
-		padding: 2em 5em;
+		padding: 2em 4em;
+	}
+
+	.nav-container {
+		display: flex;
+		justify-content: space-between;
+
+		.hamburger-menu {
+			display: none;
+		}
+
+		.navbar {
+			width: 50%;
+			display: block;
+
+			ul {
+				display: flex;
+				overflow: hidden;
+				list-style-type: none;
+				padding-top: 0.25em;
+
+				li {
+					margin: 0 0.5em;
+					text-align: center;
+					border-style: solid;
+					border-width: 0.1em;
+					border-radius: 2em;
+					border-color: $primary-color;
+
+					&:hover {
+						cursor: pointer;
+						background-color: $primary-button-color;
+						border-color: $secondary-button-color;
+					}
+				}
+			}
+		}
 	}
 
 	.hero {
 		img {
 			max-width: 70%;
+			left: 5em;
 		}
 	}
 
-	.reviews {
-		img {
-			max-width: 60%;
+	.footer-container {
+		.contact-info {
+			display: flex;
+			justify-content: flex-start;
+
+			.footer-contact {
+				margin: 2em 10em 0 0;
+			}
 		}
 	}
 }
 
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-width: 1024px) {
 	body {
-		padding: 3em 8em;
+		padding: 2em 6em;
+	}
+
+	.nav-container {
+		.navbar {
+			width: 40%;
+		}
 	}
 
 	.hero {
-		height: 38vh;
+		height: 35vh;
 		flex-direction: row;
 
 		.hero-content {
@@ -558,25 +654,31 @@ select {
 		}
 
 		.hero-image {
-			margin: -2em 0;
-
 			img {
-				width: 55%;
+				width: 50%;
+				top: -1em;
+				left: 25em;
 			}
 		}
 	}
 
 	.about {
 		flex-direction: row;
-		margin: 3em auto;
+		margin-bottom: 1em auto 3em;
 
 		.about-image {
 			width: 40vw;
-			margin: 0 4em;
+			margin-right: 3em;
 		}
 
 		.about-content {
 			width: 45vw;
+			margin-top: 2em;
+			.about-services {
+				.left-icons {
+					margin-right: 0;
+				}
+			}
 		}
 	}
 
@@ -585,30 +687,169 @@ select {
 			flex-direction: row;
 			margin: 1em auto;
 
-			img {
-				max-width: 90%;
+			.review-image {
+				width: 40vw;
+				img {
+					max-width: 100%;
+				}
 			}
+
 			.review-content {
-				margin: auto;
-				width: 35vw;
+				margin: auto 0 auto 2em;
+				width: 45vw;
 			}
+		}
+	}
+
+	.cta {
+		padding: 4em;
+
+		.left {
+			width: 60%;
+		}
+
+		img {
+			width: 20%;
+			right: 10em;
 		}
 	}
 }
 
-@media only screen and (min-width: 1201px) {
+@media only screen and (min-width: 1280px) {
 	body {
-		padding: 3em 15em;
+		padding: 2em 10em;
+	}
+
+	.nav-container {
+		.navbar {
+			width: 35%;
+		}
 	}
 
 	.hero {
+		height: 40vh;
+
 		.hero-content {
-			width: 40vw;
-			padding: 0 3em 0 0;
+			width: 35vw;
 		}
 
+		.hero-image {
+			img {
+				width: 48%;
+				left: 30em;
+			}
+		}
+	}
+
+	.about {
+		.about-image {
+			width: 39vw;
+			margin-right: 3em;
+		}
+
+		.about-content {
+			.about-services {
+				.left-icons {
+					margin-right: 5em;
+				}
+			}
+		}
+	}
+
+	.cta {
+		padding: 4em 6em;
+		margin-bottom: 15em;
+
 		img {
-			max-width: 40%;
+			width: 20%;
+			right: 18em;
+		}
+	}
+}
+
+@media only screen and (min-width: 1366px) {
+	body {
+		padding: 2em 12em;
+	}
+
+	.nav-container {
+		.navbar {
+			width: 35%;
+		}
+	}
+
+	.hero {
+		height: 45vh;
+	}
+}
+
+@media only screen and (min-width: 1453px) {
+	body {
+		padding: 2em 16em;
+	}
+
+	.nav-container {
+		.navbar {
+			width: 23%;
+		}
+	}
+
+	.hero {
+		height: 45vh;
+
+		.hero-content {
+			width: 35vw;
+		}
+
+		.hero-image {
+			img {
+				width: 40%;
+				left: 45em;
+			}
+		}
+	}
+
+	.featured,
+	.chefs {
+		span {
+			display: none;
+		}
+	}
+
+	.about {
+		.about-image {
+			width: 20vw;
+			margin-right: 3em;
+		}
+
+		.about-content {
+			.about-services {
+				.left-icons {
+					margin-right: 10em;
+				}
+			}
+		}
+	}
+
+	.reviews {
+		.review-container {
+			.review-image {
+				width: 20vw;
+			}
+
+			.review-content {
+				width: 40vw;
+			}
+		}
+	}
+
+	.cta {
+		padding: 7em 6em;
+		margin-bottom: 17em;
+
+		img {
+			width: 13%;
+			right: 27em;
 		}
 	}
 }

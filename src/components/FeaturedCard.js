@@ -8,7 +8,7 @@ const FeaturedCard = (category) => {
 			<div class="card-body">
 				<img src=${category[i].foodImg} alt="${category[i].foodName}" />
 
-				<p class="card-title">${category[i].foodName}</p>
+				<h3 class="card-title">${category[i].foodName}</h3>
 
 				<span class="card-rating">
                     <i class='fa fa-star'></i>
