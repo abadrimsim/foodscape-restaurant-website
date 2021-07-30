@@ -5,7 +5,6 @@ import { foodMenu, reviews, chefs } from './content';
 import ChefCard from './components/ChefCard';
 import FeaturedCard from './components/FeaturedCard';
 import MenuCard from './components/MenuCard';
-// import ReviewCard from './components/ReviewCard';
 
 document.addEventListener('DOMContentLoaded', (e) => {
 	// Navbar

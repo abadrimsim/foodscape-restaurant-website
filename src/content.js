@@ -161,23 +161,23 @@ const reviews = [
 
 const chefs = [
 	{
-		chefImg: 'https://i.ibb.co/TtMvnr4/chef-1.png',
+		chefImg: 'https://i.ibb.co/mcC2RjD/chef-1.png',
 		chefName: 'Sarah Miller',
 	},
 	{
-		chefImg: 'https://i.ibb.co/tPLLX22/chef-2.png',
+		chefImg: 'https://i.ibb.co/yFV2W0R/chef-2.png',
 		chefName: 'Jackson Smith',
 	},
 	{
-		chefImg: 'https://i.ibb.co/pdzGz6m/chef-3.png',
+		chefImg: 'https://i.ibb.co/QbKKmy1/chef-3.png',
 		chefName: 'Jenny Peterson',
 	},
 	{
-		chefImg: 'https://i.ibb.co/Y70ddRZ/chef-4.png',
+		chefImg: 'https://i.ibb.co/YyN8p2L/chef-4.png',
 		chefName: 'Camilla Brown',
 	},
 	{
-		chefImg: 'https://i.ibb.co/s6FMwzW/chef-5.png',
+		chefImg: 'https://i.ibb.co/pZY8yG4/chef-5.png',
 		chefName: 'Ramon Hernandez',
 	},
 ];

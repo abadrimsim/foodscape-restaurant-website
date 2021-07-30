@@ -25,6 +25,10 @@ $secondary-button-color: #fff;
 	margin: 0;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	height: 100vh;
 	font-family: $open-sans;
@@ -112,6 +116,7 @@ select {
 				font-family: $amaranth;
 				font-weight: 800;
 				margin-top: 0.5em;
+				font-size: 1.15em;
 			}
 		}
 
@@ -159,16 +164,14 @@ select {
 		}
 
 		ul {
-			// display: flex;
 			overflow: hidden;
 			list-style-type: none;
 			margin: 0;
 
 			li {
 				display: block;
-				margin: 0;
 				text-align: center;
-				padding: 0.15rem;
+				padding: 0.3em 0.2rem;
 
 				&:hover {
 					cursor: pointer;
@@ -181,6 +184,7 @@ select {
 					color: $secondary-text-color;
 					font-weight: 700;
 					transition: all 0.5s;
+					margin: 0 0.7em;
 				}
 			}
 		}
@@ -229,11 +233,11 @@ select {
 	.featured-content,
 	.menu-content {
 		width: 100%;
-		height: 410px;
+		height: 450px;
 		margin: auto;
 		display: flex;
 		align-items: center;
-		overflow-x: hidden;
+		cursor: pointer;
 
 		&::-webkit-scrollbar {
 			display: none;
@@ -246,11 +250,14 @@ select {
 			background-color: $secondary-button-color;
 			border-radius: 1.25em;
 			margin: 0.65em;
-			box-shadow: 5px 15px 30px rgb(238, 238, 227);
 			position: relative;
 			left: 0;
 			transition: 0.5s;
 			text-align: center;
+
+			&:hover {
+				box-shadow: 5px 15px 30px rgb(226, 226, 216);
+			}
 
 			.card-body {
 				position: absolute;
@@ -355,24 +362,26 @@ select {
 	}
 
 	.review-container {
-		display: flex;
-		flex-direction: column;
+		.review-card {
+			display: flex;
+			flex-direction: column;
 
-		img {
-			width: 90%;
-		}
-
-		.review-content {
-			.review-title {
-				color: $secondary-text-color;
-				font-weight: 700;
-				font-size: 1.15em;
-				margin: 1em 0;
+			img {
+				width: 90%;
 			}
 
-			.review-name {
-				color: $secondary-text-color;
-				margin: 1.25em 0;
+			.review-content {
+				.review-title {
+					color: $secondary-text-color;
+					font-weight: 700;
+					font-size: 1.15em;
+					margin: 1em 0;
+				}
+
+				.review-name {
+					color: $secondary-text-color;
+					margin: 1.25em 0;
+				}
 			}
 		}
 	}
@@ -396,11 +405,11 @@ select {
 
 	.chef-content {
 		width: 100%;
-		height: 410px;
+		height: 450px;
 		margin: auto;
 		display: flex;
 		align-items: center;
-		overflow-x: hidden;
+		cursor: pointer;
 
 		&::-webkit-scrollbar {
 			display: none;
@@ -412,17 +421,19 @@ select {
 			background-color: $secondary-button-color;
 			border-radius: 1.25em;
 			margin: 0.65em;
-			box-shadow: 5px 15px 30px rgb(238, 238, 227);
 			position: relative;
 			left: 0;
 			transition: 0.5s;
 			text-align: center;
 
+			&:hover {
+				box-shadow: 5px 15px 30px rgb(226, 226, 216);
+			}
+
 			.card-body {
 				position: absolute;
 				top: 50%;
 				transform: translateY(-50%);
-				padding-top: 1em;
 
 				img {
 					width: 80%;
@@ -488,29 +499,47 @@ select {
 			font-family: $amaranth;
 			font-weight: 800;
 			margin: 0.5em;
+			font-size: 1.15em;
 		}
 	}
 
 	hr {
-		margin-bottom: 2em;
+		margin-bottom: 1.5em;
 	}
 
-	.footer-link {
-		margin-bottom: 2em;
-		li {
-			line-height: 2.5em;
-		}
+	.contact-info {
+		.footer-contact {
+			font-size: 0.8em;
 
-		p {
-			padding: 2em 0;
+			p {
+				margin-top: 1em;
+			}
 		}
+		.footer-link {
+			margin-bottom: 2em;
+			ul {
+				li {
+					line-height: 2em;
+					color: $tertiary-text-color;
+					font-size: 0.8em;
+				}
 
-		.footer-title {
-			color: $primary-text-color;
-			font-family: $amaranth;
-			font-weight: 700;
-			font-size: 1.15em;
-			margin-top: 1em;
+				&:hover {
+					color: $tertiary-text-color;
+				}
+			}
+
+			p {
+				padding: 2em 0;
+			}
+
+			.footer-title {
+				color: $primary-text-color;
+				font-family: $amaranth;
+				font-weight: 700;
+				font-size: 1.15em;
+				margin-top: 1em;
+			}
 		}
 	}
 }
@@ -546,11 +575,15 @@ select {
 	}
 
 	.reviews {
-		.review-image {
-			max-width: 65%;
-			margin: 0 auto;
-			img {
-				width: 100%;
+		.review-container {
+			.review-card {
+				.review-image {
+					max-width: 65%;
+					margin: 0 auto;
+					img {
+						width: 100%;
+					}
+				}
 			}
 		}
 	}
@@ -586,7 +619,8 @@ select {
 		}
 
 		.navbar {
-			width: 50%;
+			width: 62%;
+			padding-left: 0.5em;
 			display: block;
 
 			ul {
@@ -639,7 +673,8 @@ select {
 
 	.nav-container {
 		.navbar {
-			width: 40%;
+			width: 50%;
+			padding-left: 2em;
 		}
 	}
 
@@ -666,6 +701,7 @@ select {
 	.about {
 		flex-direction: row;
 		margin-bottom: 1em auto 3em;
+		width: 65vw;
 
 		.about-image {
 			width: 40vw;
@@ -685,19 +721,22 @@ select {
 
 	.reviews {
 		.review-container {
-			flex-direction: row;
-			margin: 1em auto;
+			.review-card {
+				flex-direction: row;
+				margin: 1em auto;
+				width: 65vw;
 
-			.review-image {
-				width: 40vw;
-				img {
-					max-width: 100%;
+				.review-image {
+					width: 40vw;
+					img {
+						max-width: 100%;
+					}
 				}
-			}
 
-			.review-content {
-				margin: auto 0 auto 2em;
-				width: 45vw;
+				.review-content {
+					margin: auto 0 auto 2em;
+					width: 45vw;
+				}
 			}
 		}
 	}
@@ -723,12 +762,12 @@ select {
 
 	.nav-container {
 		.navbar {
-			width: 35%;
+			padding-left: 6em;
 		}
 	}
 
 	.hero {
-		height: 40vh;
+		height: 45vh;
 
 		.hero-content {
 			width: 35vw;
@@ -742,7 +781,17 @@ select {
 		}
 	}
 
+	.featured,
+	.regular-menu {
+		.featured-content,
+		.menu-content {
+			overflow-x: hidden;
+		}
+	}
+
 	.about {
+		width: 60vw;
+
 		.about-image {
 			width: 39vw;
 			margin-right: 3em;
@@ -754,6 +803,20 @@ select {
 					margin-right: 5em;
 				}
 			}
+		}
+	}
+
+	.reviews {
+		.review-container {
+			.review-card {
+				width: 60vw;
+			}
+		}
+	}
+
+	.chefs {
+		.chef-content {
+			overflow-x: hidden;
 		}
 	}
 
@@ -772,26 +835,16 @@ select {
 	body {
 		padding: 2em 12em;
 	}
-
-	.nav-container {
-		.navbar {
-			width: 35%;
-		}
-	}
-
-	.hero {
-		height: 45vh;
-	}
 }
 
 @media only screen and (min-width: 1453px) {
 	body {
-		padding: 2em 17em;
+		padding: 2em 18em;
 	}
 
 	.nav-container {
 		.navbar {
-			width: 23%;
+			padding-left: 18em;
 		}
 	}
 
@@ -800,12 +853,13 @@ select {
 
 		.hero-content {
 			width: 35vw;
+			margin-top: 4em;
 		}
 
 		.hero-image {
 			img {
 				width: 40%;
-				left: 45em;
+				left: 50em;
 			}
 		}
 	}
@@ -820,13 +874,13 @@ select {
 	.about {
 		.about-image {
 			width: 20vw;
-			margin-right: 3em;
 		}
 
 		.about-content {
+			margin-left: 2em;
 			.about-services {
 				.left-icons {
-					margin-right: 10em;
+					margin-right: 8em;
 				}
 			}
 		}
@@ -834,12 +888,14 @@ select {
 
 	.reviews {
 		.review-container {
-			.review-image {
-				width: 20vw;
-			}
+			.review-card {
+				.review-image {
+					width: 20vw;
+				}
 
-			.review-content {
-				width: 40vw;
+				.review-content {
+					width: 35vw;
+				}
 			}
 		}
 	}

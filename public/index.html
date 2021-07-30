@@ -31,9 +31,9 @@
 			<nav class="navbar">
 				<ul>
 					<li><a href="#">Home</a></li>
-					<li><a href="#">About Us</a></li>
-					<li><a href="#">Menu</a></li>
-					<li><a href="#">Reviews</a></li>
+					<li><a href="#about">About Us</a></li>
+					<li><a href="#menu">Menu</a></li>
+					<li><a href="#reviews">Reviews</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -49,7 +49,7 @@
 				</p>
 
 				<form>
-					<button formaction="index.html">Explore Food</button>
+					<button formaction="#menu">Explore Food</button>
 				</form>
 			</div>
 
@@ -64,7 +64,7 @@
 		</div>
 
 		<!-- Featured Menu Section -->
-		<section class="featured">
+		<section class="featured" id="featured">
 			<div class="featured-header transition2">
 				<h2>Popular Dishes</h2>
 
@@ -82,7 +82,7 @@
 		</section>
 
 		<!-- About Us Section -->
-		<section class="about">
+		<section class="about" id="about">
 			<div class="about-image transition3">
 				<img src="./images/about-image.png" alt="Foodscape Featured Dish" />
 			</div>
@@ -93,8 +93,7 @@
 					<p class="about-desc">
 						Foodscape serves a menu that is typically populated with a familiar
 						fare. Guests come to us because of our propensity to serve dishes
-						and drinks that they recognize; they can always rely on us to make
-						quality meals without any surprises.
+						and drinks that they recognize.
 					</p>
 				</div>
 
@@ -144,7 +143,7 @@
 		</section>
 
 		<!-- Regular Menu Section -->
-		<section class="regular-menu">
+		<section class="regular-menu" id="menu">
 			<div class="menu-header transition4">
 				<h2>Our Menu</h2>
 
@@ -167,7 +166,7 @@
 		</section>
 
 		<!-- Reviews Section -->
-		<section class="reviews">
+		<section class="reviews" id="reviews">
 			<div class="reviews-header transition5">
 				<h2>Some Testimonials!</h2>
 
@@ -182,18 +181,18 @@
 			</div>
 
 			<div class="review-container transition5">
-				<div class="review-image">
-					<img src="./images/person-1.png" alt="Personal Review" />
-				</div>
-
-				<div class="review-content">
-					<div class="inner">
+				<div class="review-card">
+					<div class="review-content">
 						<p class="review-title">The food is so great here!</p>
 						<p class="review-body">
 							"Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
 							culpa et aliquid dolore quisquam aut rerum nemo ut eos in."
 						</p>
 						<p class="review-name">Jane Doe</p>
+					</div>
+
+					<div class="review-image">
+						<img src="./images/person-2.png" alt="Personal Review" />
 					</div>
 				</div>
 			</div>
@@ -272,11 +271,11 @@
 					<div class="footer-link">
 						<ul>
 							<li class="footer-title">Quick Links</li>
-							<li>Home</li>
-							<li>About Us</li>
-							<li>Menu</li>
-							<li>Reviews</li>
-							<li>Our Chefs</li>
+
+							<li><a href="#">Home</a></li>
+							<li><a href="#about">About Us</a></li>
+							<li><a href="#menu">Menu</a></li>
+							<li><a href="#reviews">Reviews</a></li>
 						</ul>
 					</div>
 				</div>
