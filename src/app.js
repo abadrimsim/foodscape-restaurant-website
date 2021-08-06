@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
 	tl.from('.hero-content', {
 		y: '-30%',
 		opacity: 0,
-		duration: 2,
+		duration: 1.5,
 		ease: Power4.easeOut,
 	});
 
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
 	gsap.from('.hero-anim', {
 		stagger: 0.2,
 		scale: 0.1,
-		duration: 1.5,
+		duration: 1,
 		ease: Back.easeOut.config(1.7),
 	});
 
@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
 		},
 		y: 50,
 		opacity: 0,
-		duration: 1,
+		duration: 1.2,
 		stagger: 0.6,
 	});
 
