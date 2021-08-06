@@ -430,6 +430,7 @@ select {
 		display: flex;
 		align-items: center;
 		cursor: pointer;
+		overflow-x: hidden;
 
 		&::-webkit-scrollbar {
 			display: none;
@@ -880,11 +881,11 @@ select {
 		}
 	}
 
-	.chefs {
-		.chef-content {
-			overflow-x: hidden;
-		}
-	}
+	// .chefs {
+	// 	.chef-content {
+	// 		overflow-x: hidden;
+	// 	}
+	// }
 
 	.cta {
 		padding: 4em 6em;
