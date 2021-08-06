@@ -87,7 +87,6 @@ document.addEventListener('DOMContentLoaded', (e) => {
 		scrollTrigger: {
 			trigger: '.transition4',
 			start: 'top center',
-			end: '+=500',
 		},
 		scale: 0.1,
 		duration: 1,
