@@ -41,22 +41,27 @@
 		<!-- Hero Section -->
 		<div class="hero">
 			<div class="hero-content">
-				<h1>We’re Always in the Mood for Food!</h1>
-				<p>
+				<h1 class="stagger1">We’re Always in the Mood for Food!</h1>
+				<p class="stagger1">
 					Foodscape is a casual dining restaurant with a fun, comfortable,
 					laid-back atmosphere and affordably priced menu. Guests come to us
 					because of our propensity to serve dishes and drinks.
 				</p>
 
-				<form>
+				<form class="stagger1">
 					<button formaction="#menu">Explore Food</button>
 				</form>
 			</div>
 
 			<div class="hero-image">
-				<img src="./images/hero-round-img.png" alt="Hero Section Dish" />
+				<img
+					class="hero-anim"
+					src="./images/hero-round-img.png"
+					alt="Hero Section Dish"
+				/>
 
 				<img
+					class="hero-anim"
 					src="./images/hero-plate-img.png"
 					alt="Hero Section Vector Image"
 				/>
@@ -65,7 +70,7 @@
 
 		<!-- Featured Menu Section -->
 		<section class="featured" id="featured">
-			<div class="featured-header transition2">
+			<div class="featured-header transition1">
 				<h2>Popular Dishes</h2>
 
 				<span class="arrows">
@@ -78,17 +83,17 @@
 				</span>
 			</div>
 
-			<div class="featured-content" id="featured-cards"></div>
+			<div class="featured-content transition1" id="featured-cards"></div>
 		</section>
 
 		<!-- About Us Section -->
 		<section class="about" id="about">
-			<div class="about-image transition3">
+			<div class="about-image transition2">
 				<img src="./images/about-image.png" alt="Foodscape Featured Dish" />
 			</div>
 
-			<div class="about-content">
-				<div class="about-desc transition3">
+			<div class="about-content transition2">
+				<div class="about-desc">
 					<h2 class="about-title">There’s No Other Place Like Foodscape</h2>
 					<p class="about-desc">
 						Foodscape serves a menu that is typically populated with a familiar
@@ -144,7 +149,7 @@
 
 		<!-- Regular Menu Section -->
 		<section class="regular-menu" id="menu">
-			<div class="menu-header transition4">
+			<div class="menu-header transition2">
 				<h2>Our Menu</h2>
 
 				<span>
@@ -170,12 +175,12 @@
 				</span>
 			</div>
 
-			<div class="menu-content" id="menu-cards"></div>
+			<div class="menu-content transition2" id="menu-cards"></div>
 		</section>
 
 		<!-- Reviews Section -->
 		<section class="reviews" id="reviews">
-			<div class="reviews-header transition5">
+			<div class="reviews-header transition3">
 				<h2>Some Testimonials!</h2>
 
 				<span>
@@ -188,7 +193,7 @@
 				</span>
 			</div>
 
-			<div class="review-container transition5">
+			<div class="review-container transition3">
 				<div class="review-item first">
 					<div class="review-content">
 						<p class="review-title">The food is so great here!</p>
@@ -238,7 +243,7 @@
 
 		<!-- Chefs Section -->
 		<section class="chefs">
-			<div class="chef-header transition5">
+			<div class="chef-header transition3">
 				<h2>Meet Our Chefs</h2>
 
 				<span class="arrows">
@@ -251,12 +256,12 @@
 				</span>
 			</div>
 
-			<div class="chef-content" id="chef-cards"></div>
+			<div class="chef-content transition3" id="chef-cards"></div>
 		</section>
 
 		<!-- CTA Section -->
 		<section class="cta">
-			<div class="left transition5">
+			<div class="left transition3">
 				<h2>
 					Never Feel Hungry! Download Our Mobile App and Enjoy the Delicious
 					Food!
@@ -282,7 +287,11 @@
 				</span>
 			</div>
 
-			<img src="./images/mobile-view.png" alt="Download App" />
+			<img
+				class="transition4"
+				src="./images/mobile-view.png"
+				alt="Download App"
+			/>
 		</section>
 
 		<!-- Footer Section -->
@@ -325,6 +334,21 @@
 			</footer>
 		</div>
 
+		<!-- GSAP CDN -->
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"
+			integrity="sha512-UxP+UhJaGRWuMG2YC6LPWYpFQnsSgnor0VUF3BHdD83PS/pOpN+FYbZmrYN+ISX8jnvgVUciqP/fILOXDjZSwg=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"
+			integrity="sha512-DlTk2PLUinhBupE89kHOJTt11QqbRMQVlbb26XVDvp4D1kt0fRvQJslvZnTelRJHq6yK0tIPCR7cul8+9Blz0g=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+
+		<!-- JS Script -->
 		<script src="../src/app.js"></script>
 	</body>
 </html>

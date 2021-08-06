@@ -22,6 +22,79 @@ document.addEventListener('DOMContentLoaded', (e) => {
 		menu.classList.toggle('active');
 	});
 
+	// GSAP Animation
+	gsap.registerPlugin(ScrollTrigger);
+	const tl = gsap.timeline();
+
+	tl.from('.hero-content', {
+		y: '-30%',
+		opacity: 0,
+		duration: 2,
+		ease: Power4.easeOut,
+	});
+
+	tl.from(
+		'.stagger1',
+		{
+			opacity: 0,
+			y: -50,
+			stagger: 0.3,
+			ease: Power4.easeOut,
+			duration: 2,
+		},
+		'-=1.5'
+	);
+
+	gsap.from('.hero-anim', {
+		stagger: 0.2,
+		scale: 0.1,
+		duration: 1.5,
+		ease: Back.easeOut.config(1.7),
+	});
+
+	gsap.from('.transition1', {
+		y: 50,
+		opacity: 0,
+		duration: 1.2,
+		stagger: 0.3,
+	});
+
+	gsap.from('.transition2', {
+		scrollTrigger: {
+			trigger: '.transition2',
+			start: 'top center',
+			end: '+=500',
+		},
+		y: 50,
+		opacity: 0,
+		duration: 1.2,
+		stagger: 0.3,
+	});
+
+	gsap.from('.transition3', {
+		scrollTrigger: {
+			trigger: '.transition3',
+			start: 'top center',
+			end: '+=500',
+		},
+		y: 50,
+		opacity: 0,
+		duration: 1,
+		stagger: 0.6,
+	});
+
+	gsap.from('.transition4', {
+		scrollTrigger: {
+			trigger: '.transition4',
+			start: 'top center',
+			end: '+=500',
+		},
+		stagger: 0.2,
+		scale: 0.1,
+		duration: 1,
+		ease: Back.easeOut.config(1.7),
+	});
+
 	// Category Select
 	foodCategory.addEventListener('change', (e) => {
 		const category = e.target.value;
