@@ -243,7 +243,7 @@ select {
 
 		.featured-card,
 		.menu-card {
-			min-width: 15.5em;
+			min-width: 15em;
 			height: 80%;
 			background-color: $secondary-button-color;
 			border-radius: 1.25em;
@@ -487,14 +487,35 @@ select {
 			margin-bottom: 1.5em;
 		}
 
-		button {
-			background-color: $secondary-color;
-			font-size: 0.65em;
-			font-weight: 400;
-			width: 40%;
+		.cta-btns {
+			display: flex;
+			margin-top: 2rem;
 
-			&:hover {
-				background-color: $primary-button-color;
+			button {
+				background-color: $secondary-color;
+				color: $secondary-text-color;
+				font-size: 0.65rem;
+				font-weight: 600;
+				display: flex;
+				text-align: left;
+				width: 8rem;
+				margin-right: 0.75rem;
+				padding: 0.5rem 1rem;
+
+				img {
+					position: relative;
+					width: 18%;
+					margin: 0;
+					color: $secondary-text-color;
+					right: 0;
+				}
+
+				p {
+					margin: 0 0 0 0.5rem;
+				}
+				&:hover {
+					background-color: $primary-button-color;
+				}
 			}
 		}
 	}
@@ -883,7 +904,7 @@ select {
 
 @media only screen and (min-width: 1453px) {
 	body {
-		padding: 2em 16em;
+		padding: 2em 18em;
 	}
 
 	.nav-container {
@@ -910,7 +931,7 @@ select {
 
 	.featured,
 	.chefs {
-		span {
+		.arrows {
 			display: none;
 		}
 	}
@@ -956,12 +977,12 @@ select {
 	}
 
 	.cta {
-		padding: 7em 6em;
+		padding: 7em 10em;
 		margin-bottom: 17em;
 
 		img {
 			width: 13%;
-			right: 27em;
+			right: 28em;
 		}
 	}
 }

@@ -1,4 +1,5 @@
 'use strict';
+import { foodMenu, chefs } from '../content';
 
 const ReviewCarousel = (type, category, item, btn) => {
 	const slides = document.querySelectorAll(item);
@@ -9,6 +10,9 @@ const ReviewCarousel = (type, category, item, btn) => {
 	let max;
 
 	if (type === 'Featured' || type === 'Chef') {
+		console.log(foodMenu.length);
+		console.log('Yey');
+
 		max = 330;
 
 		if (mobileView.matches) {
