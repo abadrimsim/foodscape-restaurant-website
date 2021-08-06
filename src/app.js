@@ -89,7 +89,6 @@ document.addEventListener('DOMContentLoaded', (e) => {
 			start: 'top center',
 			end: '+=500',
 		},
-		stagger: 0.2,
 		scale: 0.1,
 		duration: 1,
 		ease: Back.easeOut.config(1.7),
