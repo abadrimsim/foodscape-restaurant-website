@@ -236,6 +236,7 @@ select {
 		display: flex;
 		align-items: center;
 		cursor: pointer;
+		overflow-x: hidden;
 
 		&::-webkit-scrollbar {
 			display: none;
@@ -831,13 +832,13 @@ select {
 		}
 	}
 
-	.featured,
-	.regular-menu {
-		.featured-content,
-		.menu-content {
-			overflow-x: hidden;
-		}
-	}
+	// .featured,
+	// .regular-menu {
+	// 	.featured-content,
+	// 	.menu-content {
+	// 		overflow-x: hidden;
+	// 	}
+	// }
 
 	.about {
 		width: 60vw;
